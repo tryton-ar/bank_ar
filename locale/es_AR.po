@@ -1,0 +1,11 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:bank.account,journal:"
+msgid "Account Journal"
+msgstr "Diario contable"
+
+msgctxt "model:party.category,name:party_category_bancos"
+msgid "Bancos"
+msgstr ""
