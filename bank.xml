@@ -4,6 +4,18 @@ this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data>
 
+        <record model="ir.ui.view" id="bank_view_form">
+            <field name="model">bank</field>
+            <field name="inherit" ref="bank.bank_view_form"/>
+            <field name="name">bank_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="bank_view_list">
+            <field name="model">bank</field>
+            <field name="inherit" ref="bank.bank_view_list"/>
+            <field name="name">bank_list</field>
+        </record>
+
         <record model="ir.ui.view" id="bank_account_view_form">
             <field name="model">bank.account</field>
             <field name="inherit" ref="bank.bank_account_view_form"/>
