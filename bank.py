@@ -12,6 +12,8 @@ __metaclass__ = PoolMeta
 class Bank:
     __name__ = 'bank'
 
+    bcra_code = fields.Char('BCRA code')
+
     @classmethod
     def check_xml_record(cls, records, values):
         return True
