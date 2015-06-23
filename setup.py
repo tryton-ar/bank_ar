@@ -33,10 +33,10 @@ requires.append('trytond >= %s.%s, < %s.%s' %
 
 setup(name='trytonar_bank_ar',
     version=info.get('version', '0.0.1'),
-    description=info.get('description', ''),
-    author=info.get('author', ''),
-    author_email=info.get('email', ''),
-    url=info.get('website', ''),
+    description=info.get('description', 'Module for banks of Argentina'),
+    author=info.get('author', 'Mario Puntin'),
+    author_email=info.get('email', 'contacto@silix.com.ar'),
+    url=info.get('website', 'http://www.silix.com.ar'),
     package_dir={'trytond.modules.bank_ar': '.'},
     packages=[
         'trytond.modules.bank_ar',
