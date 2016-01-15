@@ -9,7 +9,7 @@
         <record model="party.party" id="party_banco_americanexpress">
             <field name="name">AMERICAN EXPRESS BANK LTD SA</field>
             <field name="vat_number">30626219353</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_americanexpress">
             <field name="category" ref="party_category_bancos"/>
@@ -34,7 +34,7 @@
         <record model="party.party" id="party_banco_bacs">
             <field name="name">BACS BANCO DE CREDITO Y SECURITIZACION SA</field>
             <field name="vat_number">30707227415</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_bacs">
             <field name="category" ref="party_category_bancos"/>
@@ -58,7 +58,7 @@
         <record model="party.party" id="party_banco_interfinanzas">
             <field name="name">BANCO INTERFINANZAS SA</field>
             <field name="vat_number">30522714417</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_interfinanzas">
             <field name="category" ref="party_category_bancos"/>
@@ -82,7 +82,7 @@
         <record model="party.party" id="party_banco_bradesco">
             <field name="name">BANCO BRADESCO ARGENTINA SA</field>
             <field name="vat_number">30701255557</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_bradesco">
             <field name="category" ref="party_category_bancos"/>
@@ -106,7 +106,7 @@
         <record model="party.party" id="party_banco_cetelem">
             <field name="name">BANCO CETELEM ARGENTINA SA</field>
             <field name="vat_number">30697306362</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_cetelem">
             <field name="category" ref="party_category_bancos"/>
@@ -130,7 +130,7 @@
         <record model="party.party" id="party_banco_cmf">
             <field name="name">BANCO CMF SOCIEDAD ANONIMA</field>
             <field name="vat_number">30576614299</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_cmf">
             <field name="category" ref="party_category_bancos"/>
@@ -154,7 +154,7 @@
         <record model="party.party" id="party_banco_columbia">
             <field name="name">BANCO COLUMBIA  SOCIEDAD ANONIMA</field>
             <field name="vat_number">30517637498</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_columbia">
             <field name="category" ref="party_category_bancos"/>
@@ -178,7 +178,7 @@
         <record model="party.party" id="party_banco_comafi">
             <field name="name">BANCO COMAFI SOCIEDAD ANONIMA</field>
             <field name="vat_number">30604731018</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_comafi">
             <field name="category" ref="party_category_bancos"/>
@@ -202,7 +202,7 @@
         <record model="party.party" id="party_banco_credicoop">
             <field name="name">BANCO CREDICOOP COOPERATIVO LTDO</field>
             <field name="vat_number">30571421352</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_credicoop">
             <field name="category" ref="party_category_bancos"/>
@@ -227,7 +227,7 @@
         <record model="party.party" id="party_banco_corrientes">
             <field name="name">BANCO DE CORRIENTES SA</field>
             <field name="vat_number">30500010602</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_corrientes">
             <field name="category" ref="party_category_bancos"/>
@@ -251,7 +251,7 @@
         <record model="party.party" id="party_banco_formosa">
             <field name="name">BANCO DE FORMOSA SA</field>
             <field name="vat_number">30671375900</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_formosa">
             <field name="category" ref="party_category_bancos"/>
@@ -276,7 +276,7 @@
         <record model="party.party" id="party_banco_galicia">
             <field name="name">BANCO DE GALICIA Y BUENOS AIRES SA</field>
             <field name="vat_number">30500001735</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_galicia">
             <field name="category" ref="party_category_bancos"/>
@@ -301,7 +301,7 @@
         <record model="party.party" id="party_banco_inversion_comercio">
             <field name="name">BANCO DE INVERSION Y COMERCIO EXTERIOR SOCIEDAD ANONIMA</field>
             <field name="vat_number">30651129083</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_inversion_comercio">
             <field name="category" ref="party_category_bancos"/>
@@ -325,7 +325,7 @@
         <record model="party.party" id="party_banco_ciudad_buenosaires">
             <field name="name">BANCO DE LA CIUDAD DE BUENOS AIRES</field>
             <field name="vat_number">30999032083</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_ciudad_buenosaires">
             <field name="category" ref="party_category_bancos"/>
@@ -350,7 +350,7 @@
         <record model="party.party" id="party_banco_nacion">
             <field name="name">BANCO DE LA NACION ARGENTINA</field>
             <field name="vat_number">30500010912</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_nacion">
             <field name="category" ref="party_category_bancos"/>
@@ -375,7 +375,7 @@
         <record model="party.party" id="party_banco_lapampa">
             <field name="name">BANCO DE LA PAMPA S.E.M.</field>
             <field name="vat_number">30500012516</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_lapampa">
             <field name="category" ref="party_category_bancos"/>
@@ -399,7 +399,7 @@
         <record model="party.party" id="party_banco_provincia_bsas">
             <field name="name">BANCO DE LA PROVINCIA DE BUENOS AIRES</field>
             <field name="vat_number">33999242109</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_provincia_bsas">
             <field name="category" ref="party_category_bancos"/>
@@ -424,7 +424,7 @@
         <record model="party.party" id="party_banco_cordoba">
             <field name="name">BANCO DE LA PROVINCIA DE CORDOBA SA</field>
             <field name="vat_number">30999228565</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_cordoba">
             <field name="category" ref="party_category_bancos"/>
@@ -449,7 +449,7 @@
         <record model="party.party" id="party_banco_rou">
             <field name="name">BANCO DE LA REPUBLICA ORIENTAL DEL URUGUAY</field>
             <field name="vat_number">30588337843</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_rou">
             <field name="category" ref="party_category_bancos"/>
@@ -473,7 +473,7 @@
         <record model="party.party" id="party_banco_sanjuan">
             <field name="name">BANCO DE SAN JUAN SA</field>
             <field name="vat_number">30500009442</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_sanjuan">
             <field name="category" ref="party_category_bancos"/>
@@ -497,7 +497,7 @@
         <record model="party.party" id="party_banco_santacruz">
             <field name="name">BANCO DE SANTA CRUZ SOCIEDAD ANONIMA</field>
             <field name="vat_number">30500098801</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_santacruz">
             <field name="category" ref="party_category_bancos"/>
@@ -521,7 +521,7 @@
         <record model="party.party" id="party_banco_santiagoestero">
             <field name="name">BANCO DE SANTIAGO DEL ESTERO SOCIEDAD ANONIMA</field>
             <field name="vat_number">33686664649</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_santiagoestero">
             <field name="category" ref="party_category_bancos"/>
@@ -545,7 +545,7 @@
         <record model="party.party" id="party_banco_serviciosfinancieros">
             <field name="name">BANCO DE SERVICIOS FINANCIEROS SA</field>
             <field name="vat_number">30697265895</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_serviciosfinancieros">
             <field name="category" ref="party_category_bancos"/>
@@ -569,7 +569,7 @@
         <record model="party.party" id="party_banco_serviciostransacciones">
             <field name="name">BANCO DE SERVICIOS Y TRANSACCIONES SA</field>
             <field name="vat_number">30704960995</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_serviciostransacciones">
             <field name="category" ref="party_category_bancos"/>
@@ -593,7 +593,7 @@
         <record model="party.party" id="party_banco_valores">
             <field name="name">BANCO DE VALORES SA</field>
             <field name="vat_number">30576124275</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_valores">
             <field name="category" ref="party_category_bancos"/>
@@ -618,7 +618,7 @@
         <record model="party.party" id="party_banco_chubut">
             <field name="name">BANCO DEL CHUBUT SA</field>
             <field name="vat_number">30500012990</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_chubut">
             <field name="category" ref="party_category_bancos"/>
@@ -641,8 +641,8 @@
 
         <record model="party.party" id="party_banco_del_sol">
             <field name="name">BANCO DEL SOL SA</field>
-            <field name="vat_number">30604731018</field>
-            <field name="vat_country">AR</field>
+            <field name="vat_number">30677937560</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_del_sol">
             <field name="category" ref="party_category_bancos"/>
@@ -666,7 +666,7 @@
         <record model="party.party" id="party_banco_tucuman">
             <field name="name">BANCO DEL TUCUMAN SA</field>
             <field name="vat_number">30517948205</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_tucuman">
             <field name="category" ref="party_category_bancos"/>
@@ -690,7 +690,7 @@
         <record model="party.party" id="party_banco_do_brasil">
             <field name="name">BANCO DO BRASIL SA SUCURSAL BS AS</field>
             <field name="vat_number">30500012443</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_do_brasil">
             <field name="category" ref="party_category_bancos"/>
@@ -714,7 +714,7 @@
         <record model="party.party" id="party_banco_finansur">
             <field name="name">BANCO FINANSUR SA</field>
             <field name="vat_number">30518954241</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_finansur">
             <field name="category" ref="party_category_bancos"/>
@@ -738,7 +738,7 @@
         <record model="party.party" id="party_banco_hipotecario">
             <field name="name">BANCO HIPOTECARIO SOCIEDAD ANONIMA</field>
             <field name="vat_number">30500011072</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_hipotecario">
             <field name="category" ref="party_category_bancos"/>
@@ -763,7 +763,7 @@
         <record model="party.party" id="party_banco_industrial">
             <field name="name">BANCO INDUSTRIAL SOCIEDAD ANONIMA</field>
             <field name="vat_number">30685029959</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_industrial">
             <field name="category" ref="party_category_bancos"/>
@@ -787,7 +787,7 @@
         <record model="party.party" id="party_banco_itau">
             <field name="name">BANCO ITAU ARGENTINA SA</field>
             <field name="vat_number">30580189411</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_itau">
             <field name="category" ref="party_category_bancos"/>
@@ -812,7 +812,7 @@
         <record model="party.party" id="party_banco_julio">
             <field name="name">BANCO JULIO SA</field>
             <field name="vat_number">30657441216</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_julio">
             <field name="category" ref="party_category_bancos"/>
@@ -836,7 +836,7 @@
         <record model="party.party" id="party_banco_macro">
             <field name="name">BANCO MACRO SOCIEDAD ANONIMA</field>
             <field name="vat_number">30500010084</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_macro">
             <field name="category" ref="party_category_bancos"/>
@@ -860,7 +860,7 @@
         <record model="party.party" id="party_banco_mariva">
             <field name="name">BANCO MARIVA SA</field>
             <field name="vat_number">30516420444</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_mariva">
             <field name="category" ref="party_category_bancos"/>
@@ -885,7 +885,7 @@
         <record model="party.party" id="party_banco_masventas">
             <field name="name">BANCO MASVENTAS SOCIEDAD ANONIMA</field>
             <field name="vat_number">30540618263</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_masventas">
             <field name="category" ref="party_category_bancos"/>
@@ -909,7 +909,7 @@
         <record model="party.party" id="party_banco_meridian">
             <field name="name">BANCO MERIDIAN SOCIEDAD ANONIMA</field>
             <field name="vat_number">30534487491</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_meridian">
             <field name="category" ref="party_category_bancos"/>
@@ -933,7 +933,7 @@
         <record model="party.party" id="party_banco_municipal_rosario">
             <field name="name">BANCO MUNICIPAL DE ROSARIO</field>
             <field name="vat_number">33999181819</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_municipal_rosario">
             <field name="category" ref="party_category_bancos"/>
@@ -957,7 +957,7 @@
         <record model="party.party" id="party_banco_patagonia">
             <field name="name">BANCO PATAGONIA SOCIEDAD ANONIMA</field>
             <field name="vat_number">30500006613</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_patagonia">
             <field name="category" ref="party_category_bancos"/>
@@ -982,7 +982,7 @@
         <record model="party.party" id="party_banco_piano">
             <field name="name">BANCO PIANO SA</field>
             <field name="vat_number">30569151763</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_piano">
             <field name="category" ref="party_category_bancos"/>
@@ -1006,7 +1006,7 @@
         <record model="party.party" id="party_banco_privado_inversiones">
             <field name="name">BANCO PRIVADO DE INVERSIONES SA</field>
             <field name="vat_number">30663233706</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_privado_inversiones">
             <field name="category" ref="party_category_bancos"/>
@@ -1030,7 +1030,7 @@
         <record model="party.party" id="party_banco_tierra_fuego">
             <field name="name">BANCO PROVINCIA DE TIERRA DEL FUEGO</field>
             <field name="vat_number">30575655781</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_tierra_fuego">
             <field name="category" ref="party_category_bancos"/>
@@ -1055,7 +1055,7 @@
         <record model="party.party" id="party_banco_neuquen">
             <field name="name">BANCO PROVINCIA DEL NEUQUEN SA</field>
             <field name="vat_number">30500014047</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_neuquen">
             <field name="category" ref="party_category_bancos"/>
@@ -1079,7 +1079,7 @@
         <record model="party.party" id="party_banco_roela">
             <field name="name">BANCO ROELA SA</field>
             <field name="vat_number">30535610440</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_roela">
             <field name="category" ref="party_category_bancos"/>
@@ -1104,7 +1104,7 @@
         <record model="party.party" id="party_banco_saenz">
             <field name="name">BANCO SAENZ SA</field>
             <field name="vat_number">30534672434</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_saenz">
             <field name="category" ref="party_category_bancos"/>
@@ -1128,7 +1128,7 @@
         <record model="party.party" id="party_banco_santanderrio">
             <field name="name">BANCO SANTANDER RIO SOCIEDAD ANONIMA</field>
             <field name="vat_number">30500008454</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_santanderrio">
             <field name="category" ref="party_category_bancos"/>
@@ -1153,7 +1153,7 @@
         <record model="party.party" id="party_banco_supervielle">
             <field name="name">BANCO SUPERVIELLE SOCIEDAD ANONIMA</field>
             <field name="vat_number">33500005179</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_supervielle">
             <field name="category" ref="party_category_bancos"/>
@@ -1178,7 +1178,7 @@
         <record model="party.party" id="party_bank_of_america">
             <field name="name">BANK OF AMERICA NATIONAL ASSOCIATION</field>
             <field name="vat_number">30500050558</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_bank_of_america">
             <field name="category" ref="party_category_bancos"/>
@@ -1203,7 +1203,7 @@
         <record model="party.party" id="party_banco_bbva_frances">
             <field name="name">BBVA BANCO FRANCES SOCIEDAD ANONIMA</field>
             <field name="vat_number">30500003193</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_bbva_frances">
             <field name="category" ref="party_category_bancos"/>
@@ -1228,7 +1228,7 @@
         <record model="party.party" id="party_banco_citibank">
             <field name="name">CITIBANK NA</field>
             <field name="vat_number">30500005625</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_citibank">
             <field name="category" ref="party_category_bancos"/>
@@ -1253,7 +1253,7 @@
         <record model="party.party" id="party_banco_deutsche">
             <field name="name">DEUTSCHE BANK SA</field>
             <field name="vat_number">30693792335</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_deutsche">
             <field name="category" ref="party_category_bancos"/>
@@ -1278,7 +1278,7 @@
         <record model="party.party" id="party_banco_hsbc">
             <field name="name">HSBC BANK ARGENTINA SA</field>
             <field name="vat_number">33537186009</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_hsbc">
             <field name="category" ref="party_category_bancos"/>
@@ -1303,7 +1303,7 @@
         <record model="party.party" id="party_banco_jpmorgan">
             <field name="name">JPMORGAN CHASE BANK NATIONAL ASSOCIATION</field>
             <field name="vat_number">30583137943</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_jpmorgan">
             <field name="category" ref="party_category_bancos"/>
@@ -1328,7 +1328,7 @@
         <record model="party.party" id="party_banco_voii">
             <field name="name">BANCO VOII SA</field>
             <field name="vat_number">30546741636</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_voii">
             <field name="category" ref="party_category_bancos"/>
@@ -1352,7 +1352,7 @@
         <record model="party.party" id="party_banco_entrerios">
             <field name="name">NUEVO BANCO DE ENTRE RIOS S.A.</field>
             <field name="vat_number">33707995519</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_entrerios">
             <field name="category" ref="party_category_bancos"/>
@@ -1376,7 +1376,7 @@
         <record model="party.party" id="party_banco_larioja">
             <field name="name">NUEVO BANCO DE LA RIOJA SA</field>
             <field name="vat_number">30671859339</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_larioja">
             <field name="category" ref="party_category_bancos"/>
@@ -1400,7 +1400,7 @@
         <record model="party.party" id="party_banco_santafe">
             <field name="name">NUEVO BANCO DE SANTA FE SA</field>
             <field name="vat_number">30692432661</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_santafe">
             <field name="category" ref="party_category_bancos"/>
@@ -1424,7 +1424,7 @@
         <record model="party.party" id="party_banco_chaco">
             <field name="name">NUEVO BANCO DEL CHACO SA</field>
             <field name="vat_number">30670157799</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_chaco">
             <field name="category" ref="party_category_bancos"/>
@@ -1448,7 +1448,7 @@
         <record model="party.party" id="party_banco_rci_banque">
             <field name="name">RCI BANQUE</field>
             <field name="vat_number">30707108343</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_rci_banque">
             <field name="category" ref="party_category_bancos"/>
@@ -1472,7 +1472,7 @@
         <record model="party.party" id="party_banco_of_china">
             <field name="name">INDUSTRIAL AND COMMERCIAL BANK OF CHINA SA</field>
             <field name="vat_number">30709447846</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_of_china">
             <field name="category" ref="party_category_bancos"/>
@@ -1491,12 +1491,13 @@
         <record model="bank" id="bank_of_china">
             <field name="party" ref="party_banco_of_china"/>
             <field name='bic'></field>
+            <field name='bcra_code'>015</field>
         </record>
 
         <record model="party.party" id="party_banco_of_tokyo">
             <field name="name">THE BANK OF TOKYO - MITSUBISHI UFJ, LTD.</field>
             <field name="vat_number">30500011838</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_of_tokyo">
             <field name="category" ref="party_category_bancos"/>
@@ -1521,7 +1522,7 @@
         <record model="party.party" id="party_banco_of_scotland">
             <field name="name">THE ROYAL BANK OF SCOTLAND NV</field>
             <field name="vat_number">30500003401</field>
-            <field name="vat_country">AR</field>
+            <field name="iva_condition">responsable_inscripto</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_of_scotland">
             <field name="category" ref="party_category_bancos"/>
@@ -1540,31 +1541,6 @@
         <record model="bank" id="bank_of_scotland">
             <field name="party" ref="party_banco_of_scotland"/>
             <field name='bic'></field>
-        </record>
-
-        <record model="party.party" id="party_banco_standard_bank_argentina">
-            <field name="name">INDUSTRIAL AND COMMERCIAL BANK OF CHINA ARGENTINA SA (ICBC)</field>
-            <field name="vat_number">30709447846</field>
-            <field name="vat_country">AR</field>
-        </record>
-        <record model="party.party-party.category" id="party_category_rel_banco_standard_bank_argentina">
-            <field name="category" ref="party_category_bancos"/>
-            <field name="party" ref="party_banco_standard_bank_argentina"/>
-        </record>
-        <record model="party.address" id="party_address_banco_standard_bank_argentina">
-            <field name="name">INDUSTRIAL AND COMMERCIAL BANK OF CHINA ARGENTINA SA (ICBC)</field>
-            <field name="party" ref="party_banco_standard_bank_argentina"/>
-            <field name='street'>Cecilia Grierson 355</field>
-            <field name='streetbis'></field>
-            <field name='zip'></field>
-            <field name='city'>Buenos Aires</field>
-            <field name='subdivision' ref='country.ar-c'/>
-            <field name='country' ref='country.ar'/>
-        </record>
-        <record model="bank" id="bank_standard_bank_argentina">
-            <field name="party" ref="party_banco_standard_bank_argentina"/>
-            <field name='bic'></field>
-            <field name='bcra_code'>015</field>
         </record>
 
     </data>
