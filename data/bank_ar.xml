@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <tryton>
-    <data>
+    <data skiptest="1">
 
         <record model="party.category" id="party_category_bancos">
             <field name="name">Bancos</field>
@@ -9,11 +9,7 @@
         <record model="party.party" id="party_banco_americanexpress">
             <field name="name">AMERICAN EXPRESS BANK LTD SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_americanexpress">
-            <field name="party" ref="party_banco_americanexpress"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30626219353</field>
+            <field name="vat_number">30626219353</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_americanexpress">
             <field name="category" ref="party_category_bancos"/>
@@ -23,7 +19,6 @@
             <field name="name">AMERICAN EXPRESS BANK LTD SA</field>
             <field name="party" ref="party_banco_americanexpress"/>
             <field name='street'>ARENALES 707</field>
-            <field name='streetbis'></field>
             <field name='zip'>1061</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -38,11 +33,7 @@
         <record model="party.party" id="party_banco_bacs">
             <field name="name">BACS BANCO DE CREDITO Y SECURITIZACION SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_bacs">
-            <field name="party" ref="party_banco_bacs"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30707227415</field>
+            <field name="vat_number">30707227415</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_bacs">
             <field name="category" ref="party_category_bancos"/>
@@ -52,7 +43,6 @@
             <field name="name">BACS BANCO DE CREDITO Y SECURITIZACION SA</field>
             <field name="party" ref="party_banco_bacs"/>
             <field name='street'>TUCUMAN 1 Piso:19</field>
-            <field name='streetbis'></field>
             <field name='zip'>1049</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -66,11 +56,7 @@
         <record model="party.party" id="party_banco_interfinanzas">
             <field name="name">BANCO INTERFINANZAS SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_interfinanzas">
-            <field name="party" ref="party_banco_interfinanzas"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30522714417</field>
+            <field name="vat_number">30522714417</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_interfinanzas">
             <field name="category" ref="party_category_bancos"/>
@@ -80,7 +66,6 @@
             <field name="name">BANCO INTERFINANZAS SA</field>
             <field name="party" ref="party_banco_interfinanzas"/>
             <field name='street'>BOUCHARD AV. 547 Piso:24</field>
-            <field name='streetbis'></field>
             <field name='zip'>1106</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -94,11 +79,7 @@
         <record model="party.party" id="party_banco_bradesco">
             <field name="name">BANCO BRADESCO ARGENTINA SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_bradesco">
-            <field name="party" ref="party_banco_bradesco"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30701255557</field>
+            <field name="vat_number">30701255557</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_bradesco">
             <field name="category" ref="party_category_bancos"/>
@@ -108,7 +89,6 @@
             <field name="name">BANCO BRADESCO ARGENTINA SA</field>
             <field name="party" ref="party_banco_bradesco"/>
             <field name='street'>JUANA MANSO 555 Piso:2 Dpto:C</field>
-            <field name='streetbis'></field>
             <field name='zip'>1107</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -122,11 +102,7 @@
         <record model="party.party" id="party_banco_cetelem">
             <field name="name">BANCO CETELEM ARGENTINA SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_cetelem">
-            <field name="party" ref="party_banco_cetelem"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30697306362</field>
+            <field name="vat_number">30697306362</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_cetelem">
             <field name="category" ref="party_category_bancos"/>
@@ -136,7 +112,6 @@
             <field name="name">BANCO CETELEM ARGENTINA SA</field>
             <field name="party" ref="party_banco_cetelem"/>
             <field name='street'>AVDA DEL LIBERTADOR 767 Piso:02</field>
-            <field name='streetbis'></field>
             <field name='zip'>1638</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -150,11 +125,7 @@
         <record model="party.party" id="party_banco_cmf">
             <field name="name">BANCO CMF SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_cmf">
-            <field name="party" ref="party_banco_cmf"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30576614299</field>
+            <field name="vat_number">30576614299</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_cmf">
             <field name="category" ref="party_category_bancos"/>
@@ -164,7 +135,6 @@
             <field name="name">BANCO CMF SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_cmf"/>
             <field name='street'>MACACHA GUEMES 150</field>
-            <field name='streetbis'></field>
             <field name='zip'>1106</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -178,11 +148,7 @@
         <record model="party.party" id="party_banco_columbia">
             <field name="name">BANCO COLUMBIA  SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_columbia">
-            <field name="party" ref="party_banco_columbia"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30517637498</field>
+            <field name="vat_number">30517637498</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_columbia">
             <field name="category" ref="party_category_bancos"/>
@@ -192,7 +158,6 @@
             <field name="name">BANCO COLUMBIA  SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_columbia"/>
             <field name='street'>TTE. GRAL. JUAN PERON 350</field>
-            <field name='streetbis'></field>
             <field name='zip'>1038</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -203,15 +168,10 @@
             <field name='bic'>CLLUARB1</field>
         </record>
 
-        
         <record model="party.party" id="party_banco_credicoop">
             <field name="name">BANCO CREDICOOP COOPERATIVO LTDO</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_credicoop">
-            <field name="party" ref="party_banco_credicoop"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30571421352</field>
+            <field name="vat_number">30571421352</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_credicoop">
             <field name="category" ref="party_category_bancos"/>
@@ -221,7 +181,6 @@
             <field name="name">BANCO CREDICOOP COOPERATIVO LTDO</field>
             <field name="party" ref="party_banco_credicoop"/>
             <field name='street'>RECONQUISTA 484</field>
-            <field name='streetbis'></field>
             <field name='zip'>1003</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -236,11 +195,7 @@
         <record model="party.party" id="party_banco_corrientes">
             <field name="name">BANCO DE CORRIENTES SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_corrientes">
-            <field name="party" ref="party_banco_corrientes"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500010602</field>
+            <field name="vat_number">30500010602</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_corrientes">
             <field name="category" ref="party_category_bancos"/>
@@ -250,7 +205,6 @@
             <field name="name">BANCO DE CORRIENTES SA</field>
             <field name="party" ref="party_banco_corrientes"/>
             <field name='street'>9 DE JULIO 1098 Piso:1º</field>
-            <field name='streetbis'></field>
             <field name='zip'>3400</field>
             <field name='city'>Corrientes</field>
             <field name='subdivision' ref='country.ar-w'/>
@@ -264,11 +218,7 @@
         <record model="party.party" id="party_banco_formosa">
             <field name="name">BANCO DE FORMOSA SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_formosa">
-            <field name="party" ref="party_banco_formosa"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30671375900</field>
+            <field name="vat_number">30671375900</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_formosa">
             <field name="category" ref="party_category_bancos"/>
@@ -278,7 +228,6 @@
             <field name="name">BANCO DE FORMOSA SA</field>
             <field name="party" ref="party_banco_formosa"/>
             <field name='street'>AVDA 25 DE MAYO 102</field>
-            <field name='streetbis'></field>
             <field name='zip'>3600</field>
             <field name='city'>Formosa</field>
             <field name='subdivision' ref='country.ar-p'/>
@@ -293,11 +242,7 @@
         <record model="party.party" id="party_banco_galicia">
             <field name="name">BANCO DE GALICIA Y BUENOS AIRES SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_galicia">
-            <field name="party" ref="party_banco_galicia"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500001735</field>
+            <field name="vat_number">30500001735</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_galicia">
             <field name="category" ref="party_category_bancos"/>
@@ -307,7 +252,6 @@
             <field name="name">BANCO DE GALICIA Y BUENOS AIRES SA</field>
             <field name="party" ref="party_banco_galicia"/>
             <field name='street'>TTE. GRAL. JUAN PERON 407</field>
-            <field name='streetbis'></field>
             <field name='zip'>1038</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -322,11 +266,7 @@
         <record model="party.party" id="party_banco_inversion_comercio">
             <field name="name">BANCO DE INVERSION Y COMERCIO EXTERIOR SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_inversion_comercio">
-            <field name="party" ref="party_banco_inversion_comercio"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30651129083</field>
+            <field name="vat_number">30651129083</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_inversion_comercio">
             <field name="category" ref="party_category_bancos"/>
@@ -336,7 +276,6 @@
             <field name="name">BANCO DE INVERSION Y COMERCIO EXTERIOR SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_inversion_comercio"/>
             <field name='street'>25 DE MAYO 526</field>
-            <field name='streetbis'></field>
             <field name='zip'>1002</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -350,11 +289,7 @@
         <record model="party.party" id="party_banco_ciudad_buenosaires">
             <field name="name">BANCO DE LA CIUDAD DE BUENOS AIRES</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_ciudad_buenosaires">
-            <field name="party" ref="party_banco_ciudad_buenosaires"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30999032083</field>
+            <field name="vat_number">30999032083</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_ciudad_buenosaires">
             <field name="category" ref="party_category_bancos"/>
@@ -364,7 +299,6 @@
             <field name="name">BANCO DE LA CIUDAD DE BUENOS AIRES</field>
             <field name="party" ref="party_banco_ciudad_buenosaires"/>
             <field name='street'>FLORIDA 302</field>
-            <field name='streetbis'></field>
             <field name='zip'>1005</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -379,11 +313,7 @@
         <record model="party.party" id="party_banco_nacion">
             <field name="name">BANCO DE LA NACION ARGENTINA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_nacion">
-            <field name="party" ref="party_banco_nacion"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500010912</field>
+            <field name="vat_number">30500010912</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_nacion">
             <field name="category" ref="party_category_bancos"/>
@@ -393,7 +323,6 @@
             <field name="name">BANCO DE LA NACION ARGENTINA</field>
             <field name="party" ref="party_banco_nacion"/>
             <field name='street'>BARTOLOME MITRE 326 P4 D428</field>
-            <field name='streetbis'></field>
             <field name='zip'>1036</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -408,11 +337,7 @@
         <record model="party.party" id="party_banco_lapampa">
             <field name="name">BANCO DE LA PAMPA S.E.M.</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_lapampa">
-            <field name="party" ref="party_banco_lapampa"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500012516</field>
+            <field name="vat_number">30500012516</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_lapampa">
             <field name="category" ref="party_category_bancos"/>
@@ -422,7 +347,6 @@
             <field name="name">BANCO DE LA PAMPA S.E.M.</field>
             <field name="party" ref="party_banco_lapampa"/>
             <field name='street'>PELLEGRINI 255</field>
-            <field name='streetbis'></field>
             <field name='zip'>6300</field>
             <field name='city'>Santa Rosa</field>
             <field name='subdivision' ref='country.ar-l'/>
@@ -436,11 +360,7 @@
         <record model="party.party" id="party_banco_provincia_bsas">
             <field name="name">BANCO DE LA PROVINCIA DE BUENOS AIRES</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_provincia_bsas">
-            <field name="party" ref="party_banco_provincia_bsas"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">33999242109</field>
+            <field name="vat_number">33999242109</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_provincia_bsas">
             <field name="category" ref="party_category_bancos"/>
@@ -450,7 +370,6 @@
             <field name="name">BANCO DE LA PROVINCIA DE BUENOS AIRES</field>
             <field name="party" ref="party_banco_provincia_bsas"/>
             <field name='street'>SAN MARTIN 137 Piso:4 Dpto:1500 S:C</field>
-            <field name='streetbis'></field>
             <field name='zip'>1004</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -465,11 +384,7 @@
         <record model="party.party" id="party_banco_cordoba">
             <field name="name">BANCO DE LA PROVINCIA DE CORDOBA SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_cordoba">
-            <field name="party" ref="party_banco_cordoba"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30999228565</field>
+            <field name="vat_number">30999228565</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_cordoba">
             <field name="category" ref="party_category_bancos"/>
@@ -479,7 +394,6 @@
             <field name="name">BANCO DE LA PROVINCIA DE CORDOBA SA</field>
             <field name="party" ref="party_banco_cordoba"/>
             <field name='street'>SAN JERONIMO 166</field>
-            <field name='streetbis'></field>
             <field name='zip'>5000</field>
             <field name='city'>Córdoba</field>
             <field name='subdivision' ref='country.ar-x'/>
@@ -494,11 +408,7 @@
         <record model="party.party" id="party_banco_rou">
             <field name="name">BANCO DE LA REPUBLICA ORIENTAL DEL URUGUAY</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_rou">
-            <field name="party" ref="party_banco_rou"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30588337843</field>
+            <field name="vat_number">30588337843</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_rou">
             <field name="category" ref="party_category_bancos"/>
@@ -508,7 +418,6 @@
             <field name="name">BANCO DE LA REPUBLICA ORIENTAL DEL URUGUAY</field>
             <field name="party" ref="party_banco_rou"/>
             <field name='street'>ESMERALDA 111</field>
-            <field name='streetbis'></field>
             <field name='zip'>1035</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -522,11 +431,7 @@
         <record model="party.party" id="party_banco_sanjuan">
             <field name="name">BANCO DE SAN JUAN SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_sanjuan">
-            <field name="party" ref="party_banco_sanjuan"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500009442</field>
+            <field name="vat_number">30500009442</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_sanjuan">
             <field name="category" ref="party_category_bancos"/>
@@ -536,7 +441,6 @@
             <field name="name">BANCO DE SAN JUAN SA</field>
             <field name="party" ref="party_banco_sanjuan"/>
             <field name='street'>AV IG DE LA ROZA OESTE 85</field>
-            <field name='streetbis'></field>
             <field name='zip'>5400</field>
             <field name='city'>San Juan</field>
             <field name='subdivision' ref='country.ar-j'/>
@@ -550,11 +454,7 @@
         <record model="party.party" id="party_banco_santacruz">
             <field name="name">BANCO DE SANTA CRUZ SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_santacruz">
-            <field name="party" ref="party_banco_santacruz"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500098801</field>
+            <field name="vat_number">30500098801</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_santacruz">
             <field name="category" ref="party_category_bancos"/>
@@ -564,7 +464,6 @@
             <field name="name">BANCO DE SANTA CRUZ SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_santacruz"/>
             <field name='street'>AV. PTE. DR. N. C. KIRCHNER 812</field>
-            <field name='streetbis'></field>
             <field name='zip'>9400</field>
             <field name='city'>Río Gallegos</field>
             <field name='subdivision' ref='country.ar-z'/>
@@ -578,11 +477,7 @@
         <record model="party.party" id="party_banco_santiagoestero">
             <field name="name">BANCO DE SANTIAGO DEL ESTERO SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_santiagoestero">
-            <field name="party" ref="party_banco_santiagoestero"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">33686664649</field>
+            <field name="vat_number">33686664649</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_santiagoestero">
             <field name="category" ref="party_category_bancos"/>
@@ -592,7 +487,6 @@
             <field name="name">BANCO DE SANTIAGO DEL ESTERO SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_santiagoestero"/>
             <field name='street'>AVDA BELGRANO 529</field>
-            <field name='streetbis'></field>
             <field name='zip'>4200</field>
             <field name='city'>Santiago del Estero</field>
             <field name='subdivision' ref='country.ar-g'/>
@@ -606,11 +500,7 @@
         <record model="party.party" id="party_banco_serviciosfinancieros">
             <field name="name">BANCO DE SERVICIOS FINANCIEROS SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_serviciosfinancieros">
-            <field name="party" ref="party_banco_serviciosfinancieros"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30697265895</field>
+            <field name="vat_number">30697265895</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_serviciosfinancieros">
             <field name="category" ref="party_category_bancos"/>
@@ -620,7 +510,6 @@
             <field name="name">BANCO DE SERVICIOS FINANCIEROS SA</field>
             <field name="party" ref="party_banco_serviciosfinancieros"/>
             <field name='street'>AYACUCHO 1055 Piso:1</field>
-            <field name='streetbis'></field>
             <field name='zip'>1111</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -634,11 +523,7 @@
         <record model="party.party" id="party_banco_serviciostransacciones">
             <field name="name">BANCO DE SERVICIOS Y TRANSACCIONES SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_serviciostransacciones">
-            <field name="party" ref="party_banco_serviciostransacciones"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30704960995</field>
+            <field name="vat_number">30704960995</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_serviciostransacciones">
             <field name="category" ref="party_category_bancos"/>
@@ -648,7 +533,6 @@
             <field name="name">BANCO DE SERVICIOS Y TRANSACCIONES SA</field>
             <field name="party" ref="party_banco_serviciostransacciones"/>
             <field name='street'>CORRIENTES AV. 1174 Piso:3</field>
-            <field name='streetbis'></field>
             <field name='zip'>1043</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -662,11 +546,7 @@
         <record model="party.party" id="party_banco_valores">
             <field name="name">BANCO DE VALORES SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_valores">
-            <field name="party" ref="party_banco_valores"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30576124275</field>
+            <field name="vat_number">30576124275</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_valores">
             <field name="category" ref="party_category_bancos"/>
@@ -676,7 +556,6 @@
             <field name="name">BANCO DE VALORES SA</field>
             <field name="party" ref="party_banco_valores"/>
             <field name='street'>SARMIENTO 310</field>
-            <field name='streetbis'></field>
             <field name='zip'>1041</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -691,11 +570,7 @@
         <record model="party.party" id="party_banco_chubut">
             <field name="name">BANCO DEL CHUBUT SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_chubut">
-            <field name="party" ref="party_banco_chubut"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500012990</field>
+            <field name="vat_number">30500012990</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_chubut">
             <field name="category" ref="party_category_bancos"/>
@@ -705,7 +580,6 @@
             <field name="name">BANCO DEL CHUBUT SA</field>
             <field name="party" ref="party_banco_chubut"/>
             <field name='street'>RIVADAVIA 615</field>
-            <field name='streetbis'></field>
             <field name='zip'>9103</field>
             <field name='city'>Rawson</field>
             <field name='subdivision' ref='country.ar-u'/>
@@ -719,11 +593,8 @@
         <!--
         <record model="party.party" id="party_banco_del_sol">
             <field name="name">BANCO DEL SOL SA</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_del_sol">
-            <field name="party" ref="party_banco_del_sol"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30677937560</field>
+            <field name="iva_condition">responsable_inscripto</field>
+            <field name="vat_number">30677937560</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_del_sol">
             <field name="category" ref="party_category_bancos"/>
@@ -733,7 +604,6 @@
             <field name="name">BANCO DEL SOL SA</field>
             <field name="party" ref="party_banco_del_sol"/>
             <field name='street'>AV 51 607</field>
-            <field name='streetbis'></field>
             <field name='zip'>1900</field>
             <field name='city'>La Plata</field>
             <field name='subdivision' ref='country.ar-b'/>
@@ -748,11 +618,7 @@
         <record model="party.party" id="party_banco_tucuman">
             <field name="name">BANCO DEL TUCUMAN SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_tucuman">
-            <field name="party" ref="party_banco_tucuman"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30517948205</field>
+            <field name="vat_number">30517948205</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_tucuman">
             <field name="category" ref="party_category_bancos"/>
@@ -762,7 +628,6 @@
             <field name="name">BANCO DEL TUCUMAN SA</field>
             <field name="party" ref="party_banco_tucuman"/>
             <field name='street'>SAN MARTIN 721</field>
-            <field name='streetbis'></field>
             <field name='zip'>4000</field>
             <field name='city'>San Miguel de Tucumán</field>
             <field name='subdivision' ref='country.ar-t'/>
@@ -776,11 +641,7 @@
         <record model="party.party" id="party_banco_do_brasil">
             <field name="name">BANCO DO BRASIL SA SUCURSAL BS AS</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_do_brasil">
-            <field name="party" ref="party_banco_do_brasil"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500012443</field>
+            <field name="vat_number">30500012443</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_do_brasil">
             <field name="category" ref="party_category_bancos"/>
@@ -790,7 +651,6 @@
             <field name="name">BANCO DO BRASIL SA SUCURSAL BS AS</field>
             <field name="party" ref="party_banco_do_brasil"/>
             <field name='street'>LAVALLE 462 Piso:1</field>
-            <field name='streetbis'></field>
             <field name='zip'>1047</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -804,11 +664,7 @@
         <record model="party.party" id="party_banco_finansur">
             <field name="name">BANCO FINANSUR SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_finansur">
-            <field name="party" ref="party_banco_finansur"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30518954241</field>
+            <field name="vat_number">30518954241</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_finansur">
             <field name="category" ref="party_category_bancos"/>
@@ -818,7 +674,6 @@
             <field name="name">BANCO FINANSUR SA</field>
             <field name="party" ref="party_banco_finansur"/>
             <field name='street'>SARMIENTO 700</field>
-            <field name='streetbis'></field>
             <field name='zip'>1041</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -832,11 +687,7 @@
         <record model="party.party" id="party_banco_hipotecario">
             <field name="name">BANCO HIPOTECARIO SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_hipotecario">
-            <field name="party" ref="party_banco_hipotecario"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500011072</field>
+            <field name="vat_number">30500011072</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_hipotecario">
             <field name="category" ref="party_category_bancos"/>
@@ -846,7 +697,6 @@
             <field name="name">BANCO HIPOTECARIO SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_hipotecario"/>
             <field name='street'>RECONQUISTA 151</field>
-            <field name='streetbis'></field>
             <field name='zip'>1003</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -861,11 +711,7 @@
         <record model="party.party" id="party_banco_industrial">
             <field name="name">BANCO INDUSTRIAL SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_industrial">
-            <field name="party" ref="party_banco_industrial"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30685029959</field>
+            <field name="vat_number">30685029959</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_industrial">
             <field name="category" ref="party_category_bancos"/>
@@ -875,7 +721,6 @@
             <field name="name">BANCO INDUSTRIAL SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_industrial"/>
             <field name='street'>SARMIENTO 530</field>
-            <field name='streetbis'></field>
             <field name='zip'>1041</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -889,11 +734,7 @@
         <record model="party.party" id="party_banco_itau">
             <field name="name">BANCO ITAU ARGENTINA SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_itau">
-            <field name="party" ref="party_banco_itau"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30580189411</field>
+            <field name="vat_number">30580189411</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_itau">
             <field name="category" ref="party_category_bancos"/>
@@ -903,7 +744,6 @@
             <field name="name">BANCO ITAU ARGENTINA SA</field>
             <field name="party" ref="party_banco_itau"/>
             <field name='street'>VICTORIA OCAMPO 360 Piso:08</field>
-            <field name='streetbis'></field>
             <field name='zip'>1107</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -918,11 +758,7 @@
         <record model="party.party" id="party_banco_julio">
             <field name="name">BANCO JULIO SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_julio">
-            <field name="party" ref="party_banco_julio"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30657441216</field>
+            <field name="vat_number">30657441216</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_julio">
             <field name="category" ref="party_category_bancos"/>
@@ -932,7 +768,6 @@
             <field name="name">BANCO JULIO SA</field>
             <field name="party" ref="party_banco_julio"/>
             <field name='street'>ITUZAINGO 167 Piso:PB</field>
-            <field name='streetbis'></field>
             <field name='zip'>5000</field>
             <field name='city'>Córdoba</field>
             <field name='subdivision' ref='country.ar-x'/>
@@ -946,11 +781,7 @@
         <record model="party.party" id="party_banco_macro">
             <field name="name">BANCO MACRO SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_macro">
-            <field name="party" ref="party_banco_macro"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500010084</field>
+            <field name="vat_number">30500010084</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_macro">
             <field name="category" ref="party_category_bancos"/>
@@ -960,7 +791,6 @@
             <field name="name">BANCO MACRO SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_macro"/>
             <field name='street'>SARMIENTO 447</field>
-            <field name='streetbis'></field>
             <field name='zip'>1041</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -974,11 +804,7 @@
         <record model="party.party" id="party_banco_mariva">
             <field name="name">BANCO MARIVA SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_mariva">
-            <field name="party" ref="party_banco_mariva"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30516420444</field>
+            <field name="vat_number">30516420444</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_mariva">
             <field name="category" ref="party_category_bancos"/>
@@ -988,7 +814,6 @@
             <field name="name">BANCO MARIVA SA</field>
             <field name="party" ref="party_banco_mariva"/>
             <field name='street'>SARMIENTO 500</field>
-            <field name='streetbis'></field>
             <field name='zip'>1041</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1003,11 +828,7 @@
         <record model="party.party" id="party_banco_masventas">
             <field name="name">BANCO MASVENTAS SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_masventas">
-            <field name="party" ref="party_banco_masventas"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30540618263</field>
+            <field name="vat_number">30540618263</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_masventas">
             <field name="category" ref="party_category_bancos"/>
@@ -1017,7 +838,6 @@
             <field name="name">BANCO MASVENTAS SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_masventas"/>
             <field name='street'>ESPAÑA 610</field>
-            <field name='streetbis'></field>
             <field name='zip'>4400</field>
             <field name='city'>Salta</field>
             <field name='subdivision' ref='country.ar-a'/>
@@ -1031,11 +851,7 @@
         <record model="party.party" id="party_banco_meridian">
             <field name="name">BANCO MERIDIAN SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_meridian">
-            <field name="party" ref="party_banco_meridian"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30534487491</field>
+            <field name="vat_number">30534487491</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_meridian">
             <field name="category" ref="party_category_bancos"/>
@@ -1045,7 +861,6 @@
             <field name="name">BANCO MERIDIAN SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_meridian"/>
             <field name='street'>TUCUMAN 821 Piso:PB</field>
-            <field name='streetbis'></field>
             <field name='zip'>1049</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1059,11 +874,7 @@
         <record model="party.party" id="party_banco_municipal_rosario">
             <field name="name">BANCO MUNICIPAL DE ROSARIO</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_municipal_rosario">
-            <field name="party" ref="party_banco_municipal_rosario"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">33999181819</field>
+            <field name="vat_number">33999181819</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_municipal_rosario">
             <field name="category" ref="party_category_bancos"/>
@@ -1073,7 +884,6 @@
             <field name="name">BANCO MUNICIPAL DE ROSARIO</field>
             <field name="party" ref="party_banco_municipal_rosario"/>
             <field name='street'>SAN MARTIN 730</field>
-            <field name='streetbis'></field>
             <field name='zip'>2000</field>
             <field name='city'>Rosario</field>
             <field name='subdivision' ref='country.ar-s'/>
@@ -1087,11 +897,7 @@
         <record model="party.party" id="party_banco_patagonia">
             <field name="name">BANCO PATAGONIA SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_patagonia">
-            <field name="party" ref="party_banco_patagonia"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500006613</field>
+            <field name="vat_number">30500006613</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_patagonia">
             <field name="category" ref="party_category_bancos"/>
@@ -1101,7 +907,6 @@
             <field name="name">BANCO PATAGONIA SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_patagonia"/>
             <field name='street'>AV. DE MAYO 701 Piso:24</field>
-            <field name='streetbis'></field>
             <field name='zip'>1084</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1116,11 +921,7 @@
         <record model="party.party" id="party_banco_piano">
             <field name="name">BANCO PIANO SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_piano">
-            <field name="party" ref="party_banco_piano"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30569151763</field>
+            <field name="vat_number">30569151763</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_piano">
             <field name="category" ref="party_category_bancos"/>
@@ -1130,7 +931,6 @@
             <field name="name">BANCO PIANO SA</field>
             <field name="party" ref="party_banco_piano"/>
             <field name='street'>SAN MARTIN 347</field>
-            <field name='streetbis'></field>
             <field name='zip'>1004</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1144,11 +944,7 @@
         <record model="party.party" id="party_banco_privado_inversiones">
             <field name="name">BANCO PRIVADO DE INVERSIONES SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_privado_inversiones">
-            <field name="party" ref="party_banco_privado_inversiones"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30663233706</field>
+            <field name="vat_number">30663233706</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_privado_inversiones">
             <field name="category" ref="party_category_bancos"/>
@@ -1158,7 +954,6 @@
             <field name="name">BANCO PRIVADO DE INVERSIONES SA</field>
             <field name="party" ref="party_banco_privado_inversiones"/>
             <field name='street'>SARMIENTO 447 Piso:1 </field>
-            <field name='streetbis'></field>
             <field name='zip'>1041</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1172,11 +967,7 @@
         <record model="party.party" id="party_banco_tierra_fuego">
             <field name="name">BANCO PROVINCIA DE TIERRA DEL FUEGO</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_tierra_fuego">
-            <field name="party" ref="party_banco_tierra_fuego"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30575655781</field>
+            <field name="vat_number">30575655781</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_tierra_fuego">
             <field name="category" ref="party_category_bancos"/>
@@ -1186,7 +977,6 @@
             <field name="name">BANCO PROVINCIA DE TIERRA DEL FUEGO</field>
             <field name="party" ref="party_banco_tierra_fuego"/>
             <field name='street'>AV MAIPU 897</field>
-            <field name='streetbis'></field>
             <field name='zip'>9410</field>
             <field name='city'>Ushuaia</field>
             <field name='subdivision' ref='country.ar-v'/>
@@ -1201,11 +991,7 @@
         <record model="party.party" id="party_banco_neuquen">
             <field name="name">BANCO PROVINCIA DEL NEUQUEN SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_neuquen">
-            <field name="party" ref="party_banco_neuquen"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500014047</field>
+            <field name="vat_number">30500014047</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_neuquen">
             <field name="category" ref="party_category_bancos"/>
@@ -1215,7 +1001,6 @@
             <field name="name">BANCO PROVINCIA DEL NEUQUEN SA</field>
             <field name="party" ref="party_banco_neuquen"/>
             <field name='street'>AVENIDA ARGENTINA 41</field>
-            <field name='streetbis'></field>
             <field name='zip'>8300</field>
             <field name='city'>Neuquén</field>
             <field name='subdivision' ref='country.ar-q'/>
@@ -1229,11 +1014,7 @@
         <record model="party.party" id="party_banco_roela">
             <field name="name">BANCO ROELA SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_roela">
-            <field name="party" ref="party_banco_roela"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30535610440</field>
+            <field name="vat_number">30535610440</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_roela">
             <field name="category" ref="party_category_bancos"/>
@@ -1243,7 +1024,6 @@
             <field name="name">BANCO ROELA SA</field>
             <field name="party" ref="party_banco_roela"/>
             <field name='street'>ROSARIO DE SANTA FE 275</field>
-            <field name='streetbis'></field>
             <field name='zip'>5000</field>
             <field name='city'>Córdoba</field>
             <field name='subdivision' ref='country.ar-x'/>
@@ -1258,11 +1038,7 @@
         <record model="party.party" id="party_banco_saenz">
             <field name="name">BANCO SAENZ SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_saenz">
-            <field name="party" ref="party_banco_saenz"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30534672434</field>
+            <field name="vat_number">30534672434</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_saenz">
             <field name="category" ref="party_category_bancos"/>
@@ -1272,7 +1048,6 @@
             <field name="name">BANCO SAENZ SA</field>
             <field name="party" ref="party_banco_saenz"/>
             <field name='street'>ESMERALDA 83</field>
-            <field name='streetbis'></field>
             <field name='zip'>1035</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1286,11 +1061,7 @@
         <record model="party.party" id="party_banco_santanderrio">
             <field name="name">BANCO SANTANDER RIO SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_santanderrio">
-            <field name="party" ref="party_banco_santanderrio"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500008454</field>
+            <field name="vat_number">30500008454</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_santanderrio">
             <field name="category" ref="party_category_bancos"/>
@@ -1300,7 +1071,6 @@
             <field name="name">BANCO SANTANDER RIO SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_santanderrio"/>
             <field name='street'>BARTOLOME MITRE 480</field>
-            <field name='streetbis'></field>
             <field name='zip'>1036</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1315,11 +1085,7 @@
         <record model="party.party" id="party_banco_supervielle">
             <field name="name">BANCO SUPERVIELLE SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_supervielle">
-            <field name="party" ref="party_banco_supervielle"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">33500005179</field>
+            <field name="vat_number">33500005179</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_supervielle">
             <field name="category" ref="party_category_bancos"/>
@@ -1329,7 +1095,6 @@
             <field name="name">BANCO SUPERVIELLE SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_supervielle"/>
             <field name='street'>BARTOLOME MITRE 434</field>
-            <field name='streetbis'></field>
             <field name='zip'>1036</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1344,11 +1109,7 @@
         <record model="party.party" id="party_bank_of_america">
             <field name="name">BANK OF AMERICA NATIONAL ASSOCIATION</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_bank_of_america">
-            <field name="party" ref="party_bank_of_america"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500050558</field>
+            <field name="vat_number">30500050558</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_bank_of_america">
             <field name="category" ref="party_category_bancos"/>
@@ -1358,7 +1119,6 @@
             <field name="name">BANK OF AMERICA NATIONAL ASSOCIATION</field>
             <field name="party" ref="party_bank_of_america"/>
             <field name='street'>CARLOS DELLA PAOLERA 265 Piso:19</field>
-            <field name='streetbis'></field>
             <field name='zip'>1001</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1373,11 +1133,7 @@
         <record model="party.party" id="party_banco_bbva_frances">
             <field name="name">BBVA BANCO FRANCES SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_bbva_frances">
-            <field name="party" ref="party_banco_bbva_frances"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500003193</field>
+            <field name="vat_number">30500003193</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_bbva_frances">
             <field name="category" ref="party_category_bancos"/>
@@ -1387,7 +1143,6 @@
             <field name="name">BBVA BANCO FRANCES SOCIEDAD ANONIMA</field>
             <field name="party" ref="party_banco_bbva_frances"/>
             <field name='street'>RECONQUISTA 199</field>
-            <field name='streetbis'></field>
             <field name='zip'>1003</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1402,11 +1157,7 @@
         <record model="party.party" id="party_banco_citibank">
             <field name="name">CITIBANK NA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_citibank">
-            <field name="party" ref="party_banco_citibank"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500005625</field>
+            <field name="vat_number">30500005625</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_citibank">
             <field name="category" ref="party_category_bancos"/>
@@ -1416,7 +1167,6 @@
             <field name="name">CITIBANK NA</field>
             <field name="party" ref="party_banco_citibank"/>
             <field name='street'>BARTOLOME MITRE 502</field>
-            <field name='streetbis'></field>
             <field name='zip'>1036</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1431,11 +1181,7 @@
         <record model="party.party" id="party_banco_deutsche">
             <field name="name">DEUTSCHE BANK SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_deutsche">
-            <field name="party" ref="party_banco_deutsche"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30693792335</field>
+            <field name="vat_number">30693792335</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_deutsche">
             <field name="category" ref="party_category_bancos"/>
@@ -1445,7 +1191,6 @@
             <field name="name">DEUTSCHE BANK SA</field>
             <field name="party" ref="party_banco_deutsche"/>
             <field name='street'>TUCUMAN 1 Piso:13</field>
-            <field name='streetbis'></field>
             <field name='zip'>1049</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1460,11 +1205,7 @@
         <record model="party.party" id="party_banco_hsbc">
             <field name="name">HSBC BANK ARGENTINA SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_hsbc">
-            <field name="party" ref="party_banco_hsbc"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">33537186009</field>
+            <field name="vat_number">33537186009</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_hsbc">
             <field name="category" ref="party_category_bancos"/>
@@ -1474,7 +1215,6 @@
             <field name="name">HSBC BANK ARGENTINA SA</field>
             <field name="party" ref="party_banco_hsbc"/>
             <field name='street'>FLORIDA 229 P8</field>
-            <field name='streetbis'></field>
             <field name='zip'>1005</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1489,11 +1229,7 @@
         <record model="party.party" id="party_banco_jpmorgan">
             <field name="name">JPMORGAN CHASE BANK NATIONAL ASSOCIATION</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_jpmorgan">
-            <field name="party" ref="party_banco_jpmorgan"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30583137943</field>
+            <field name="vat_number">30583137943</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_jpmorgan">
             <field name="category" ref="party_category_bancos"/>
@@ -1503,7 +1239,6 @@
             <field name="name">JPMORGAN CHASE BANK NATIONAL ASSOCIATION</field>
             <field name="party" ref="party_banco_jpmorgan"/>
             <field name='street'>AV. EDUARDO MADERO 900 Piso:23</field>
-            <field name='streetbis'></field>
             <field name='zip'>1106</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1518,11 +1253,7 @@
         <record model="party.party" id="party_banco_voii">
             <field name="name">BANCO VOII SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_voii">
-            <field name="party" ref="party_banco_voii"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30546741636</field>
+            <field name="vat_number">30546741636</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_voii">
             <field name="category" ref="party_category_bancos"/>
@@ -1532,7 +1263,6 @@
             <field name="name">BANCO VOII SA</field>
             <field name="party" ref="party_banco_voii"/>
             <field name='street'>AV A. MOREAU DE JUSTO 140</field>
-            <field name='streetbis'></field>
             <field name='zip'>1107</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1546,11 +1276,7 @@
         <record model="party.party" id="party_banco_entrerios">
             <field name="name">NUEVO BANCO DE ENTRE RIOS S.A.</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_entrerios">
-            <field name="party" ref="party_banco_entrerios"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">33707995519</field>
+            <field name="vat_number">33707995519</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_entrerios">
             <field name="category" ref="party_category_bancos"/>
@@ -1560,7 +1286,6 @@
             <field name="name">NUEVO BANCO DE ENTRE RIOS S.A.</field>
             <field name="party" ref="party_banco_entrerios"/>
             <field name='street'>MONTE CASEROS 128</field>
-            <field name='streetbis'></field>
             <field name='zip'>3100</field>
             <field name='city'>Paraná</field>
             <field name='subdivision' ref='country.ar-e'/>
@@ -1574,11 +1299,7 @@
         <record model="party.party" id="party_banco_larioja">
             <field name="name">NUEVO BANCO DE LA RIOJA SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_larioja">
-            <field name="party" ref="party_banco_larioja"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30671859339</field>
+            <field name="vat_number">30671859339</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_larioja">
             <field name="category" ref="party_category_bancos"/>
@@ -1588,7 +1309,6 @@
             <field name="name">NUEVO BANCO DE LA RIOJA SA</field>
             <field name="party" ref="party_banco_larioja"/>
             <field name='street'>RIVADAVIA Y SAN MARTIN</field>
-            <field name='streetbis'></field>
             <field name='zip'>5300</field>
             <field name='city'>La Rioja</field>
             <!-- <field name='subdivision' ref='country.ar-f'/> -->
@@ -1602,11 +1322,7 @@
         <record model="party.party" id="party_banco_santafe">
             <field name="name">NUEVO BANCO DE SANTA FE SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_santafe">
-            <field name="party" ref="party_banco_santafe"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30692432661</field>
+            <field name="vat_number">30692432661</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_santafe">
             <field name="category" ref="party_category_bancos"/>
@@ -1616,7 +1332,6 @@
             <field name="name">NUEVO BANCO DE SANTA FE SA</field>
             <field name="party" ref="party_banco_santafe"/>
             <field name='street'>TUCUMAN 2545 P2</field>
-            <field name='streetbis'></field>
             <field name='zip'>3000</field>
             <field name='city'>Santa Fe</field>
             <field name='subdivision' ref='country.ar-s'/>
@@ -1630,11 +1345,7 @@
         <record model="party.party" id="party_banco_chaco">
             <field name="name">NUEVO BANCO DEL CHACO SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_chaco">
-            <field name="party" ref="party_banco_chaco"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30670157799</field>
+            <field name="vat_number">30670157799</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_chaco">
             <field name="category" ref="party_category_bancos"/>
@@ -1644,7 +1355,6 @@
             <field name="name">NUEVO BANCO DEL CHACO SA</field>
             <field name="party" ref="party_banco_chaco"/>
             <field name='street'>GUEMES 102 Piso:2</field>
-            <field name='streetbis'></field>
             <field name='zip'>3500</field>
             <field name='city'>Resistencia</field>
             <field name='subdivision' ref='country.ar-h'/>
@@ -1658,11 +1368,7 @@
         <record model="party.party" id="party_banco_rci_banque">
             <field name="name">RCI BANQUE</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_rci_banque">
-            <field name="party" ref="party_banco_rci_banque"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30707108343</field>
+            <field name="vat_number">30707108343</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_rci_banque">
             <field name="category" ref="party_category_bancos"/>
@@ -1672,7 +1378,6 @@
             <field name="name">RCI BANQUE</field>
             <field name="party" ref="party_banco_rci_banque"/>
             <field name='street'>FRAY S. DE ORO 1744</field>
-            <field name='streetbis'></field>
             <field name='zip'>1414</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1686,11 +1391,7 @@
         <record model="party.party" id="party_banco_of_china">
             <field name="name">INDUSTRIAL AND COMMERCIAL BANK OF CHINA SA</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_of_china">
-            <field name="party" ref="party_banco_of_china"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30709447846</field>
+            <field name="vat_number">30709447846</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_of_china">
             <field name="category" ref="party_category_bancos"/>
@@ -1700,7 +1401,6 @@
             <field name="name">INDUSTRIAL AND COMMERCIAL BANK OF CHINA SA</field>
             <field name="party" ref="party_banco_of_china"/>
             <field name='street'>BOULEVARD CECILIA GRIERSON 355 Piso:3</field>
-            <field name='streetbis'></field>
             <field name='zip'>1107</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1715,11 +1415,7 @@
         <record model="party.party" id="party_banco_of_tokyo">
             <field name="name">THE BANK OF TOKYO - MITSUBISHI UFJ, LTD.</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_of_tokyo">
-            <field name="party" ref="party_banco_of_tokyo"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500011838</field>
+            <field name="vat_number">30500011838</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_of_tokyo">
             <field name="category" ref="party_category_bancos"/>
@@ -1729,7 +1425,6 @@
             <field name="name">THE BANK OF TOKYO - MITSUBISHI UFJ, LTD.</field>
             <field name="party" ref="party_banco_of_tokyo"/>
             <field name='street'>AV. CORRIENTES 420 Piso:02</field>
-            <field name='streetbis'></field>
             <field name='zip'>1043</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
@@ -1744,11 +1439,7 @@
         <record model="party.party" id="party_banco_of_scotland">
             <field name="name">THE ROYAL BANK OF SCOTLAND NV</field>
             <field name="iva_condition">responsable_inscripto</field>
-        </record>
-        <record model="party.identifier" id="party_identifier_banco_of_scotland">
-            <field name="party" ref="party_banco_of_scotland"/>
-            <field name="type">ar_cuit</field>
-            <field name="code">30500003401</field>
+            <field name="vat_number">30500003401</field>
         </record>
         <record model="party.party-party.category" id="party_category_rel_banco_of_scotland">
             <field name="category" ref="party_category_bancos"/>
@@ -1758,7 +1449,6 @@
             <field name="name">THE ROYAL BANK OF SCOTLAND NV</field>
             <field name="party" ref="party_banco_of_scotland"/>
             <field name='street'>SUIPACHA 1029 Piso:4</field>
-            <field name='streetbis'></field>
             <field name='zip'>1008</field>
             <field name='city'>Buenos Aires</field>
             <field name='subdivision' ref='country.ar-c'/>
