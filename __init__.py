@@ -11,6 +11,7 @@ def register():
     Pool.register(
         Bank,
         BankAccount,
+        BankAccountNumber,
         Party,
         Address,
         Category,
