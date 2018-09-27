@@ -355,6 +355,7 @@
         <record model="bank" id="bank_lapampa">
             <field name="party" ref="party_banco_lapampa"/>
             <field name='bic'>PAMPARBA001</field>
+            <field name='bcra_code'>093</field>
         </record>
 
         <record model="party.party" id="party_banco_provincia_bsas">
@@ -799,6 +800,7 @@
         <record model="bank" id="bank_macro">
             <field name="party" ref="party_banco_macro"/>
             <field name='bic'>BOSUARBA</field>
+            <field name='bcra_code'>285</field>
         </record>
 
         <record model="party.party" id="party_banco_mariva">
@@ -1340,6 +1342,7 @@
         <record model="bank" id="bank_santafe">
             <field name="party" ref="party_banco_santafe"/>
             <field name='bic'>BPSFARBA500</field>
+            <field name='bcra_code'>330</field>
         </record>
 
         <record model="party.party" id="party_banco_chaco">
