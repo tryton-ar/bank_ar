@@ -16,9 +16,8 @@ NUMBERTYPE = [
     ]
 
 
-class Bank:
+class Bank(metaclass=PoolMeta):
     __name__ = 'bank'
-    __metaclass__ = PoolMeta
 
     bcra_code = fields.Char('BCRA code')
 
@@ -27,18 +26,16 @@ class Bank:
         return True
 
 
-class BankAccount:
+class BankAccount(metaclass=PoolMeta):
     __name__ = 'bank.account'
-    __metaclass__ = PoolMeta
 
     journal = fields.Many2One('account.journal', 'Account Journal',
         required=True, states={'readonly': ~Eval('active', True)},
         depends=['active'])
 
 
-class BankAccountNumber:
+class BankAccountNumber(metaclass=PoolMeta):
     __name__ = 'bank.account.number'
-    __metaclass__ = PoolMeta
 
     @classmethod
     def default_type(cls):

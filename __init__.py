@@ -3,17 +3,17 @@
 # the full copyright notices and license terms.
 
 from trytond.pool import Pool
-from .bank import *
-from .party import *
+from . import bank
+from . import party
 
 
 def register():
     Pool.register(
-        Bank,
-        BankAccount,
-        BankAccountNumber,
-        Party,
-        Address,
-        Category,
-        PartyCategory,
+        bank.Bank,
+        bank.BankAccount,
+        bank.BankAccountNumber,
+        party.Party,
+        party.Address,
+        party.Category,
+        party.PartyCategory,
         module='bank_ar', type_='model')

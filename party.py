@@ -7,36 +7,32 @@ from trytond.pool import PoolMeta
 __all__ = ['Party', 'Address', 'Category', 'PartyCategory']
 
 
-class Party:
+class Party(metaclass=PoolMeta):
     __name__ = 'party.party'
-    __metaclass__ = PoolMeta
 
     @classmethod
     def check_xml_record(cls, records, values):
         return True
 
 
-class Address:
+class Address(metaclass=PoolMeta):
     __name__ = 'party.address'
-    __metaclass__ = PoolMeta
 
     @classmethod
     def check_xml_record(cls, records, values):
         return True
 
 
-class Category:
+class Category(metaclass=PoolMeta):
     __name__ = 'party.category'
-    __metaclass__ = PoolMeta
 
     @classmethod
     def check_xml_record(cls, records, values):
         return True
 
 
-class PartyCategory:
+class PartyCategory(metaclass=PoolMeta):
     __name__ = 'party.party-party.category'
-    __metaclass__ = PoolMeta
 
     @classmethod
     def check_xml_record(cls, records, values):
