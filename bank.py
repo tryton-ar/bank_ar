@@ -37,8 +37,8 @@ class BankAccount:
 
 
 class BankAccountNumber:
-    __metaclass__ = PoolMeta
     __name__ = 'bank.account.number'
+    __metaclass__ = PoolMeta
 
     @classmethod
     def default_type(cls):
@@ -83,9 +83,9 @@ class BankAccountNumber:
                 if ((formated_number != number.number)
                         or (compacted_number != number.number_compact)):
                     to_write.extend(([number], {
-                                'number': formated_number,
-                                'number_compact': compacted_number,
-                                }))
+                        'number': formated_number,
+                        'number_compact': compacted_number,
+                        }))
         if to_write:
             cls.write(*to_write)
 
