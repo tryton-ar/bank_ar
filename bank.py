@@ -80,8 +80,8 @@ class BankAccountNumber:
             if number.type == 'cbu':
                 formated_number = cbu.format(number.number)
                 compacted_number = cbu.compact(number.number)
-                if ((formated_number != number.number)
-                        or (compacted_number != number.number_compact)):
+                if ((formated_number != number.number) or
+                        (compacted_number != number.number_compact)):
                     to_write.extend(([number], {
                         'number': formated_number,
                         'number_compact': compacted_number,
@@ -97,6 +97,6 @@ class BankAccountNumber:
     @fields.depends('type', 'number')
     def pre_validate(self):
         super(BankAccountNumber, self).pre_validate()
-        if (self.type == 'cbu' and self.number
-                and not cbu.is_valid(self.number)):
+        if (self.type == 'cbu' and self.number and
+                not cbu.is_valid(self.number)):
             self.raise_user_error('invalid_cbu', self.number)
