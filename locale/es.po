@@ -2,10 +2,22 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
+msgctxt "error:bank.account.number:"
+msgid "Invalid CBU \"%s\"."
+msgstr "CBU inválido \"%s\""
+
+msgctxt "field:bank,bcra_code:"
+msgid "BCRA code"
+msgstr "Código BCRA"
+
 msgctxt "field:bank.account,journal:"
 msgid "Account Journal"
 msgstr "Diario contable"
 
 msgctxt "model:party.category,name:party_category_bancos"
 msgid "Bancos"
+msgstr ""
+
+msgctxt "selection:bank.account.number,type:"
+msgid "CBU"
 msgstr ""
