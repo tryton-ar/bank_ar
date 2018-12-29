@@ -32,6 +32,18 @@ class BankAccount(metaclass=PoolMeta):
     journal = fields.Many2One('account.journal', 'Account Journal',
         required=True, states={'readonly': ~Eval('active', True)},
         depends=['active'])
+    credit_account = fields.Many2One('account.account', 'Credit Account',
+        required=True,
+        domain=[
+            ('kind', '!=', 'view'),
+            ('company', '=', Eval('context', {}).get('company', -1)),
+            ])
+    debit_account = fields.Many2One('account.account', 'Debit Account',
+        required=True,
+        domain=[
+            ('kind', '!=', 'view'),
+            ('company', '=', Eval('context', {}).get('company', -1)),
+            ])
 
 
 class BankAccountNumber(metaclass=PoolMeta):

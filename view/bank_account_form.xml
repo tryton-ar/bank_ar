@@ -5,5 +5,9 @@ this repository contains the full copyright notices and license terms. -->
     <xpath expr="/form/field[@name='currency']" position="after">
         <label name="journal"/>
         <field name="journal"/>
+        <label name="credit_account"/>
+        <field name="credit_account"/>
+        <label name="debit_account"/>
+        <field name="debit_account"/>
     </xpath>
 </data>

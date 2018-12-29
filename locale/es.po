@@ -10,6 +10,14 @@ msgctxt "field:bank,bcra_code:"
 msgid "BCRA code"
 msgstr "Código BCRA"
 
+msgctxt "field:bank.account,credit_account:"
+msgid "Credit Account"
+msgstr "Cuenta haber"
+
+msgctxt "field:bank.account,debit_account:"
+msgid "Debit Account"
+msgstr "Cuenta debe"
+
 msgctxt "field:bank.account,journal:"
 msgid "Account Journal"
 msgstr "Diario contable"
