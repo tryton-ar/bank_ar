@@ -1462,5 +1462,29 @@
             <field name='bic'></field>
         </record>
 
+        <record model="party.party" id="party_banco_comafi_sociedad_anonima">
+            <field name="name">BANCO COMAFI SOCIEDAD ANONIMA</field>
+            <field name="iva_condition">responsable_inscripto</field>
+            <field name="vat_number">30604731018</field>
+        </record>
+        <record model="party.party-party.category" id="party_category_rel_banco_comafi_sociedad_anonima">
+            <field name="category" ref="party_category_bancos"/>
+            <field name="party" ref="party_banco_comafi_sociedad_anonima"/>
+        </record>
+        <record model="party.address" id="party_address_banco_comafi_sociedad_anonima">
+            <field name="name">BANCO COMAFI SOCIEDAD ANONIMA</field>
+            <field name="party" ref="party_banco_comafi_sociedad_anonima"/>
+            <field name='street'>Av. Roque Saenz Peña 660</field>
+            <field name='zip'></field>
+            <field name='city'>Buenos Aires</field>
+            <field name='subdivision' ref='country.ar-c'/>
+            <field name='country' ref='country.ar'/>
+        </record>
+        <record model="bank" id="bank_comafi_sociedad_anonima">
+            <field name="party" ref="party_banco_comafi_sociedad_anonima"/>
+            <field name='bic'></field>
+            <field name='bcra_code'>299</field>
+        </record>
+
     </data>
 </tryton>
