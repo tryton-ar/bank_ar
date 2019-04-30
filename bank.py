@@ -4,8 +4,9 @@
 from stdnum.ar import cbu
 
 from trytond.model import fields
-from trytond.pyson import Eval
-from trytond.pool import PoolMeta
+from trytond.pyson import Eval, If, In
+from trytond.pool import PoolMeta, Pool
+from trytond.transaction import Transaction
 
 __all__ = ['Bank', 'BankAccount', 'BankAccountNumber']
 
@@ -30,21 +31,41 @@ class BankAccount(metaclass=PoolMeta):
     __name__ = 'bank.account'
 
     journal = fields.Many2One('account.journal', 'Account Journal',
-        required=True, states={'readonly': ~Eval('active', True)},
-        depends=['active'])
+        states={
+            'required': If(In(Eval('party_company'), Eval('owners', [])), True, False),
+            },
+        depends=['owners', 'party_company'])
     credit_account = fields.Many2One('account.account', 'Credit Account',
-        required=True,
+        states={
+            'required': If(In(Eval('party_company'), Eval('owners', [])), True, False),
+            },
         domain=[
             ('kind', '!=', 'view'),
             ('company', '=', Eval('context', {}).get('company', -1)),
-            ])
+            ], depends=['owners', 'party_company'])
     debit_account = fields.Many2One('account.account', 'Debit Account',
-        required=True,
+        states={
+            'required': If(In(Eval('party_company'), Eval('owners', [])), True, False),
+            },
         domain=[
             ('kind', '!=', 'view'),
             ('company', '=', Eval('context', {}).get('company', -1)),
-            ])
+            ], depends=['owners', 'party_company'])
+    party_company = fields.Function(fields.Many2One('party.party', 'party_company'),
+        'on_change_with_party_company')
 
+    @staticmethod
+    def default_party_company():
+        Company = Pool().get('company.company')
+        if Transaction().context.get('company'):
+            company = Company(Transaction().context['company'])
+            return company.party.id
+
+    def on_change_with_party_company(self, name=None):
+        Company = Pool().get('company.company')
+        if Transaction().context.get('company'):
+            company = Company(Transaction().context['company'])
+            return company.party.id
 
 class BankAccountNumber(metaclass=PoolMeta):
     __name__ = 'bank.account.number'
