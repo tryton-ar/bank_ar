@@ -894,6 +894,7 @@
         <record model="bank" id="bank_municipal_rosario">
             <field name="party" ref="party_banco_municipal_rosario"/>
             <field name='bic'>MUNRARBR</field>
+            <field name='bcra_code'>065</field>
         </record>
 
         <record model="party.party" id="party_banco_patagonia">
