@@ -1487,5 +1487,20 @@
             <field name='bcra_code'>299</field>
         </record>
 
+        <record model="party.party" id="party_banca_nazionale_del_lavoro">
+            <field name="name">BANCA NAZIONALE DEL LAVORO</field>
+            <field name="iva_condition">responsable_inscripto</field>
+            <field name="vat_number">30707942564</field>
+        </record>
+        <record model="party.party-party.category" id="party_category_rel_banca_nazionale_del_lavoro">
+            <field name="category" ref="party_category_bancos"/>
+            <field name="party" ref="party_banca_nazionale_del_lavoro"/>
+        </record>
+        <record model="bank" id="banca_nazionale_del_lavoro">
+            <field name="party" ref="party_banca_nazionale_del_lavoro"/>
+            <field name='bic'></field>
+            <field name='bcra_code'>265</field>
+        </record>
+
     </data>
 </tryton>
