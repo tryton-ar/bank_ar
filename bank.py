@@ -51,6 +51,11 @@ class BankAccount:
             company = Company(Transaction().context['company'])
             return company.party.id
 
+    def get_cbu_number(self, name):
+        for account_number in self.numbers:
+            if account_number.type == 'cbu':
+                return account_number.number_compact
+
 
 class BankAccountNumber(metaclass=PoolMeta):
     __name__ = 'bank.account.number'
