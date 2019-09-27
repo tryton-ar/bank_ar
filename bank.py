@@ -60,7 +60,7 @@ class BankAccount:
                 return account_number.number_compact
 
 
-class BankAccountNumber(metaclass=PoolMeta):
+class BankAccountNumber:
     __name__ = 'bank.account.number'
     __metaclass__ = PoolMeta
 
