@@ -51,6 +51,7 @@
         <record model="bank" id="bank_bacs">
             <field name="party" ref="party_banco_bacs"/>
             <field name='bic'></field>
+            <field name='bcra_code'>340</field>
         </record>
 
         <record model="party.party" id="party_banco_interfinanzas">
@@ -74,6 +75,7 @@
         <record model="bank" id="bank_interfinanzas">
             <field name="party" ref="party_banco_interfinanzas"/>
             <field name='bic'>BIINARBA</field>
+            <field name='bcra_code'>147</field>
         </record>
 
         <record model="party.party" id="party_banco_bradesco">
@@ -97,6 +99,7 @@
         <record model="bank" id="bank_bradesco">
             <field name="party" ref="party_banco_bradesco"/>
             <field name='bic'></field>
+            <field name='bcra_code'>336</field>
         </record>
 
         <record model="party.party" id="party_banco_cetelem">
@@ -120,6 +123,7 @@
         <record model="bank" id="bank_cetelem">
             <field name="party" ref="party_banco_cetelem"/>
             <field name='bic'></field>
+            <field name='bcra_code'>331</field>
         </record>
 
         <record model="party.party" id="party_banco_cmf">
@@ -143,6 +147,7 @@
         <record model="bank" id="bank_cmf">
             <field name="party" ref="party_banco_cmf"/>
             <field name='bic'>CMFBARBA</field>
+            <field name='bcra_code'>319</field>
         </record>
 
         <record model="party.party" id="party_banco_columbia">
@@ -166,6 +171,7 @@
         <record model="bank" id="bank_columbia">
             <field name="party" ref="party_banco_columbia"/>
             <field name='bic'>CLLUARB1</field>
+            <field name='bcra_code'>389</field>
         </record>
 
         <record model="party.party" id="party_banco_credicoop">
@@ -213,6 +219,7 @@
         <record model="bank" id="bank_corrientes">
             <field name="party" ref="party_banco_corrientes"/>
             <field name='bic'></field>
+            <field name='bcra_code'>094</field>
         </record>
 
         <record model="party.party" id="party_banco_formosa">
@@ -284,6 +291,7 @@
         <record model="bank" id="bank_inversion_comercio">
             <field name="party" ref="party_banco_inversion_comercio"/>
             <field name='bic'>BICXARBA</field>
+            <field name='bcra_code'>300</field>
         </record>
 
         <record model="party.party" id="party_banco_ciudad_buenosaires">
@@ -427,6 +435,7 @@
         <record model="bank" id="bank_rou">
             <field name="party" ref="party_banco_rou"/>
             <field name='bic'>BROUARBA</field>
+            <field name='bcra_code'>269</field>
         </record>
 
         <record model="party.party" id="party_banco_sanjuan">
@@ -450,6 +459,7 @@
         <record model="bank" id="bank_sanjuan">
             <field name="party" ref="party_banco_sanjuan"/>
             <field name='bic'>BSJUARBJ</field>
+            <field name='bcra_code'>045</field>
         </record>
 
         <record model="party.party" id="party_banco_santacruz">
@@ -473,6 +483,7 @@
         <record model="bank" id="bank_santacruz">
             <field name="party" ref="party_banco_santacruz"/>
             <field name='bic'>BPSCARBA</field>
+            <field name='bcra_code'>086</field>
         </record>
 
         <record model="party.party" id="party_banco_santiagoestero">
@@ -496,6 +507,7 @@
         <record model="bank" id="bank_santiagoestero">
             <field name="party" ref="party_banco_santiagoestero"/>
             <field name='bic'></field>
+            <field name='bcra_code'>321</field>
         </record>
 
         <record model="party.party" id="party_banco_serviciosfinancieros">
@@ -519,6 +531,7 @@
         <record model="bank" id="bank_serviciosfinancieros">
             <field name="party" ref="party_banco_serviciosfinancieros"/>
             <field name='bic'></field>
+            <field name='bcra_code'>332</field>
         </record>
 
         <record model="party.party" id="party_banco_serviciostransacciones">
@@ -542,6 +555,7 @@
         <record model="bank" id="bank_serviciostransacciones">
             <field name="party" ref="party_banco_serviciostransacciones"/>
             <field name='bic'>BSTIARBA</field>
+            <field name='bcra_code'>338</field>
         </record>
 
         <record model="party.party" id="party_banco_valores">
@@ -589,6 +603,7 @@
         <record model="bank" id="bank_chubut">
             <field name="party" ref="party_banco_chubut"/>
             <field name='bic'></field>
+            <field name='bcra_code'>083</field>
         </record>
 
         <!--
@@ -615,7 +630,8 @@
             <field name='bic'></field>
         </record>
         -->
-
+        
+        <!--
         <record model="party.party" id="party_banco_tucuman">
             <field name="name">BANCO DEL TUCUMAN SA</field>
             <field name="iva_condition">responsable_inscripto</field>
@@ -638,7 +654,9 @@
             <field name="party" ref="party_banco_tucuman"/>
             <field name='bic'>BDTUARBM</field>
         </record>
-
+        -->
+        
+        <!--
         <record model="party.party" id="party_banco_do_brasil">
             <field name="name">BANCO DO BRASIL SA SUCURSAL BS AS</field>
             <field name="iva_condition">responsable_inscripto</field>
@@ -661,7 +679,9 @@
             <field name="party" ref="party_banco_do_brasil"/>
             <field name='bic'></field>
         </record>
+        -->
 
+        <!--
         <record model="party.party" id="party_banco_finansur">
             <field name="name">BANCO FINANSUR SA</field>
             <field name="iva_condition">responsable_inscripto</field>
@@ -684,6 +704,7 @@
             <field name="party" ref="party_banco_finansur"/>
             <field name='bic'>BFSUARBA</field>
         </record>
+        -->
 
         <record model="party.party" id="party_banco_hipotecario">
             <field name="name">BANCO HIPOTECARIO SOCIEDAD ANONIMA</field>
@@ -730,6 +751,7 @@
         <record model="bank" id="bank_industrial">
             <field name="party" ref="party_banco_industrial"/>
             <field name='bic'>NBIAARBA</field>
+            <field name='bcra_code'>322</field>
         </record>
 
         <record model="party.party" id="party_banco_itau">
@@ -777,6 +799,7 @@
         <record model="bank" id="bank_julio">
             <field name="party" ref="party_banco_julio"/>
             <field name='bic'></field>
+            <field name='bcra_code'>305</field>
         </record>
 
         <record model="party.party" id="party_banco_macro">
@@ -848,6 +871,7 @@
         <record model="bank" id="bank_masventas">
             <field name="party" ref="party_banco_masventas"/>
             <field name='bic'></field>
+            <field name='bcra_code'>341</field>
         </record>
 
         <record model="party.party" id="party_banco_meridian">
@@ -871,6 +895,7 @@
         <record model="bank" id="bank_meridian">
             <field name="party" ref="party_banco_meridian"/>
             <field name='bic'></field>
+            <field name='bcra_code'>281</field>
         </record>
 
         <record model="party.party" id="party_banco_municipal_rosario">
@@ -942,8 +967,10 @@
         <record model="bank" id="bank_piano">
             <field name="party" ref="party_banco_piano"/>
             <field name='bic'>BAPIARBA</field>
+            <field name='bcra_code'>301</field>
         </record>
 
+        <!--
         <record model="party.party" id="party_banco_privado_inversiones">
             <field name="name">BANCO PRIVADO DE INVERSIONES SA</field>
             <field name="iva_condition">responsable_inscripto</field>
@@ -966,6 +993,7 @@
             <field name="party" ref="party_banco_privado_inversiones"/>
             <field name='bic'></field>
         </record>
+        -->
 
         <record model="party.party" id="party_banco_tierra_fuego">
             <field name="name">BANCO PROVINCIA DE TIERRA DEL FUEGO</field>
@@ -1012,6 +1040,7 @@
         <record model="bank" id="bank_neuquen">
             <field name="party" ref="party_banco_neuquen"/>
             <field name='bic'></field>
+            <field name='bcra_code'>097</field>
         </record>
 
         <record model="party.party" id="party_banco_roela">
@@ -1059,6 +1088,7 @@
         <record model="bank" id="bank_saenz">
             <field name="party" ref="party_banco_saenz"/>
             <field name='bic'></field>
+            <field name='bcra_code'>277</field>
         </record>
 
         <record model="party.party" id="party_banco_santanderrio">
@@ -1274,6 +1304,7 @@
         <record model="bank" id="bank_voii">
             <field name="party" ref="party_banco_voii"/>
             <field name='bic'></field>
+            <field name='bcra_code'>312</field>
         </record>
 
         <record model="party.party" id="party_banco_entrerios">
@@ -1297,6 +1328,7 @@
         <record model="bank" id="bank_entrerios">
             <field name="party" ref="party_banco_entrerios"/>
             <field name='bic'>BERAARBA</field>
+            <field name='bcra_code'>386</field>
         </record>
 
         <record model="party.party" id="party_banco_larioja">
@@ -1320,6 +1352,7 @@
         <record model="bank" id="bank_larioja">
             <field name="party" ref="party_banco_larioja"/>
             <field name='bic'></field>
+            <field name='bcra_code'>309</field>
         </record>
 
         <record model="party.party" id="party_banco_santafe">
@@ -1367,6 +1400,7 @@
         <record model="bank" id="bank_chaco">
             <field name="party" ref="party_banco_chaco"/>
             <field name='bic'></field>
+            <field name='bcra_code'>311</field>
         </record>
 
         <record model="party.party" id="party_banco_rci_banque">
@@ -1390,6 +1424,7 @@
         <record model="bank" id="bank_rci_banque">
             <field name="party" ref="party_banco_rci_banque"/>
             <field name='bic'></field>
+            <field name='bcra_code'>339</field>
         </record>
 
         <record model="party.party" id="party_banco_of_china">
@@ -1440,6 +1475,7 @@
             <field name='bcra_code'>018</field>
         </record>
 
+        <!--
         <record model="party.party" id="party_banco_of_scotland">
             <field name="name">THE ROYAL BANK OF SCOTLAND NV</field>
             <field name="iva_condition">responsable_inscripto</field>
@@ -1462,6 +1498,7 @@
             <field name="party" ref="party_banco_of_scotland"/>
             <field name='bic'></field>
         </record>
+        -->
 
         <record model="party.party" id="party_banco_comafi_sociedad_anonima">
             <field name="name">BANCO COMAFI SOCIEDAD ANONIMA</field>
