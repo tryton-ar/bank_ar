@@ -606,106 +606,6 @@
             <field name='bcra_code'>083</field>
         </record>
 
-        <!--
-        <record model="party.party" id="party_banco_del_sol">
-            <field name="name">BANCO DEL SOL SA</field>
-            <field name="iva_condition">responsable_inscripto</field>
-            <field name="vat_number">30677937560</field>
-        </record>
-        <record model="party.party-party.category" id="party_category_rel_banco_del_sol">
-            <field name="category" ref="party_category_bancos"/>
-            <field name="party" ref="party_banco_del_sol"/>
-        </record>
-        <record model="party.address" id="party_address_banco_del_sol">
-            <field name="name">BANCO DEL SOL SA</field>
-            <field name="party" ref="party_banco_del_sol"/>
-            <field name='street'>AV 51 607</field>
-            <field name='zip'>1900</field>
-            <field name='city'>La Plata</field>
-            <field name='subdivision' ref='country.ar-b'/>
-            <field name='country' ref='country.ar'/>
-        </record>
-        <record model="bank" id="bank_del_sol">
-            <field name="party" ref="party_banco_del_sol"/>
-            <field name='bic'></field>
-        </record>
-        -->
-        
-        <!--
-        <record model="party.party" id="party_banco_tucuman">
-            <field name="name">BANCO DEL TUCUMAN SA</field>
-            <field name="iva_condition">responsable_inscripto</field>
-            <field name="vat_number">30517948205</field>
-        </record>
-        <record model="party.party-party.category" id="party_category_rel_banco_tucuman">
-            <field name="category" ref="party_category_bancos"/>
-            <field name="party" ref="party_banco_tucuman"/>
-        </record>
-        <record model="party.address" id="party_address_banco_tucuman">
-            <field name="name">BANCO DEL TUCUMAN SA</field>
-            <field name="party" ref="party_banco_tucuman"/>
-            <field name='street'>SAN MARTIN 721</field>
-            <field name='zip'>4000</field>
-            <field name='city'>San Miguel de Tucumán</field>
-            <field name='subdivision' ref='country.ar-t'/>
-            <field name='country' ref='country.ar'/>
-        </record>
-        <record model="bank" id="bank_tucuman">
-            <field name="party" ref="party_banco_tucuman"/>
-            <field name='bic'>BDTUARBM</field>
-        </record>
-        -->
-        
-        <!--
-        <record model="party.party" id="party_banco_do_brasil">
-            <field name="name">BANCO DO BRASIL SA SUCURSAL BS AS</field>
-            <field name="iva_condition">responsable_inscripto</field>
-            <field name="vat_number">30500012443</field>
-        </record>
-        <record model="party.party-party.category" id="party_category_rel_banco_do_brasil">
-            <field name="category" ref="party_category_bancos"/>
-            <field name="party" ref="party_banco_do_brasil"/>
-        </record>
-        <record model="party.address" id="party_address_banco_do_brasil">
-            <field name="name">BANCO DO BRASIL SA SUCURSAL BS AS</field>
-            <field name="party" ref="party_banco_do_brasil"/>
-            <field name='street'>LAVALLE 462 Piso:1</field>
-            <field name='zip'>1047</field>
-            <field name='city'>Buenos Aires</field>
-            <field name='subdivision' ref='country.ar-c'/>
-            <field name='country' ref='country.ar'/>
-        </record>
-        <record model="bank" id="bank_do_brasil">
-            <field name="party" ref="party_banco_do_brasil"/>
-            <field name='bic'></field>
-        </record>
-        -->
-
-        <!--
-        <record model="party.party" id="party_banco_finansur">
-            <field name="name">BANCO FINANSUR SA</field>
-            <field name="iva_condition">responsable_inscripto</field>
-            <field name="vat_number">30518954241</field>
-        </record>
-        <record model="party.party-party.category" id="party_category_rel_banco_finansur">
-            <field name="category" ref="party_category_bancos"/>
-            <field name="party" ref="party_banco_finansur"/>
-        </record>
-        <record model="party.address" id="party_address_banco_finansur">
-            <field name="name">BANCO FINANSUR SA</field>
-            <field name="party" ref="party_banco_finansur"/>
-            <field name='street'>SARMIENTO 700</field>
-            <field name='zip'>1041</field>
-            <field name='city'>Buenos Aires</field>
-            <field name='subdivision' ref='country.ar-c'/>
-            <field name='country' ref='country.ar'/>
-        </record>
-        <record model="bank" id="bank_finansur">
-            <field name="party" ref="party_banco_finansur"/>
-            <field name='bic'>BFSUARBA</field>
-        </record>
-        -->
-
         <record model="party.party" id="party_banco_hipotecario">
             <field name="name">BANCO HIPOTECARIO SOCIEDAD ANONIMA</field>
             <field name="iva_condition">responsable_inscripto</field>
@@ -969,31 +869,6 @@
             <field name='bic'>BAPIARBA</field>
             <field name='bcra_code'>301</field>
         </record>
-
-        <!--
-        <record model="party.party" id="party_banco_privado_inversiones">
-            <field name="name">BANCO PRIVADO DE INVERSIONES SA</field>
-            <field name="iva_condition">responsable_inscripto</field>
-            <field name="vat_number">30663233706</field>
-        </record>
-        <record model="party.party-party.category" id="party_category_rel_banco_privado_inversiones">
-            <field name="category" ref="party_category_bancos"/>
-            <field name="party" ref="party_banco_privado_inversiones"/>
-        </record>
-        <record model="party.address" id="party_address_banco_privado_inversiones">
-            <field name="name">BANCO PRIVADO DE INVERSIONES SA</field>
-            <field name="party" ref="party_banco_privado_inversiones"/>
-            <field name='street'>SARMIENTO 447 Piso:1 </field>
-            <field name='zip'>1041</field>
-            <field name='city'>Buenos Aires</field>
-            <field name='subdivision' ref='country.ar-c'/>
-            <field name='country' ref='country.ar'/>
-        </record>
-        <record model="bank" id="bank_privado_inversiones">
-            <field name="party" ref="party_banco_privado_inversiones"/>
-            <field name='bic'></field>
-        </record>
-        -->
 
         <record model="party.party" id="party_banco_tierra_fuego">
             <field name="name">BANCO PROVINCIA DE TIERRA DEL FUEGO</field>
@@ -1474,31 +1349,6 @@
             <field name='bic'>BOTKARBA</field>
             <field name='bcra_code'>018</field>
         </record>
-
-        <!--
-        <record model="party.party" id="party_banco_of_scotland">
-            <field name="name">THE ROYAL BANK OF SCOTLAND NV</field>
-            <field name="iva_condition">responsable_inscripto</field>
-            <field name="vat_number">30500003401</field>
-        </record>
-        <record model="party.party-party.category" id="party_category_rel_banco_of_scotland">
-            <field name="category" ref="party_category_bancos"/>
-            <field name="party" ref="party_banco_of_scotland"/>
-        </record>
-        <record model="party.address" id="party_address_banco_of_scotland">
-            <field name="name">THE ROYAL BANK OF SCOTLAND NV</field>
-            <field name="party" ref="party_banco_of_scotland"/>
-            <field name='street'>SUIPACHA 1029 Piso:4</field>
-            <field name='zip'>1008</field>
-            <field name='city'>Buenos Aires</field>
-            <field name='subdivision' ref='country.ar-c'/>
-            <field name='country' ref='country.ar'/>
-        </record>
-        <record model="bank" id="bank_of_scotland">
-            <field name="party" ref="party_banco_of_scotland"/>
-            <field name='bic'></field>
-        </record>
-        -->
 
         <record model="party.party" id="party_banco_comafi_sociedad_anonima">
             <field name="name">BANCO COMAFI SOCIEDAD ANONIMA</field>
