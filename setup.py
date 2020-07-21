@@ -7,17 +7,20 @@ import io
 import os
 import re
 from configparser import ConfigParser
-from setuptools import setup
+from setuptools import setup, find_packages
 
 MODULE2PREFIX = {
     'party_ar': 'trytonar',
     }
 
 
-def read(fname):
-    return io.open(
+def read(fname, slice=None):
+    content = io.open(
         os.path.join(os.path.dirname(__file__), fname),
         'r', encoding='utf-8').read()
+    if slice:
+        content = '\n'.join(content.splitlines()[slice])
+    return content
 
 
 def get_require_version(name):
@@ -33,7 +36,7 @@ def get_require_version(name):
 
 
 config = ConfigParser()
-config.read_file(open('tryton.cfg'))
+config.read_file(open(os.path.join(os.path.dirname(__file__), 'tryton.cfg')))
 info = dict(config.items('tryton'))
 for key in ('depends', 'extras_depend', 'xml'):
     if key in info:
@@ -46,6 +49,17 @@ name = 'trytonar_bank_ar'
 
 download_url = 'https://github.com/tryton-ar/bank_ar/tree/%s.%s' % (
     major_version, minor_version)
+if minor_version % 2:
+    version = '%s.%s.dev0' % (major_version, minor_version)
+    download_url = (
+        'git+http://gitlab711/tryton/%s#egg=%s-%s' % (
+            name.replace('trytonar','trytond'), name, version))
+local_version = []
+for build in ['CI_BUILD_NUMBER', 'CI_JOB_NUMBER', 'CI_JOB_ID']:
+    if os.environ.get(build):
+        local_version.append(os.environ[build])
+if local_version:
+    version += '+' + '.'.join(local_version)
 
 LINKS = {
     'trytonar_party_ar': ('git+https://github.com/tryton-ar/'
@@ -55,11 +69,13 @@ LINKS = {
 
 requires = []
 for dep in info.get('depends', []):
-    if not re.match(r'(ir|res)(\W|$)', dep):
-        module_name = '%s_%s' % (MODULE2PREFIX.get(dep, 'trytond'), dep)
-        requires.append(get_require_version(module_name))
-
+    if dep == 'party_ar':
+        requires.append('trytonar_party_ar @ git+https://github.com/tryton-ar/party_ar.git@%s.%s#egg=trytonar_party_ar-%s.%s' % (major_version, minor_version, major_version, minor_version))
+    elif not re.match(r'(ir|res)(\W|$)', dep):
+        requires.append(get_require_version('trytond_%s' % dep))
 requires.append(get_require_version('trytond'))
+requires.append('pyafipws @ git+https://github.com/reingart/pyafipws.git@py3k#egg=pyafipws-py3k')
+requires.append('pysimplesoap @ git+https://github.com/pysimplesoap/pysimplesoap.git@stable_py3k#egg=pysimplesoap-stable_py3k')
 
 tests_require = [get_require_version('proteus')]
 dependency_links = list(LINKS.values())
@@ -67,15 +83,22 @@ dependency_links = list(LINKS.values())
 setup(name=name,
     version=version,
     description='Tryton module for banks of Argentina',
-    long_description=read('README.md'),
+    long_description=read('README.rst'),
     author='tryton-ar',
     url='https://github.com/tryton-ar/bank_ar',
     download_url=download_url,
+    project_urls={
+        "Bug Tracker": 'https://bugs.tryton.org/',
+        "Documentation": 'https://docs.tryton.org/',
+        "Forum": 'https://www.tryton.org/forum',
+        "Source Code": 'https://github.com/gcoop-libre/trytond-sale_subscription_tiendascoop',
+        },
     package_dir={'trytond.modules.bank_ar': '.'},
-    packages=[
-        'trytond.modules.bank_ar',
-        'trytond.modules.bank_ar.tests',
-        ],
+    packages=(
+        ['trytond.modules.bank_ar']
+        + ['trytond.modules.bank_ar.%s' % p
+            for p in find_packages()]
+        ),
     package_data={
         'trytond.modules.bank_ar': (info.get('xml', []) + [
             'tryton.cfg', 'view/*.xml', 'locale/*.po', 'data/*.xml']),
@@ -87,8 +110,8 @@ setup(name=name,
         'Intended Audience :: Developers',
         'Intended Audience :: Financial and Insurance Industry',
         'Intended Audience :: Legal Industry',
-        'License :: OSI Approved :: GNU General Public License v3 or later'
-        ' (GPLv3+)',
+        'License :: OSI Approved :: '
+        'GNU General Public License v3 or later (GPLv3+)',
         'Natural Language :: English',
         'Natural Language :: Spanish',
         'Operating System :: OS Independent',
@@ -100,7 +123,6 @@ setup(name=name,
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Office/Business',
-        'Topic :: Office/Business :: Financial :: Accounting',
         ],
     license='GPL-3',
     python_requires='>=3.5',
@@ -110,7 +132,9 @@ setup(name=name,
     entry_points="""
     [trytond.modules]
     bank_ar = trytond.modules.bank_ar
-    """,
+    [console_scripts]
+    trytond_import_banks_ar = trytond.modules.bank_ar.scripts.import_banks:run
+    """,  # noqa: E501
     test_suite='tests',
     test_loader='trytond.test_loader:Loader',
     tests_require=tests_require,
