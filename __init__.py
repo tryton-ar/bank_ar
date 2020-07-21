@@ -4,16 +4,13 @@
 
 from trytond.pool import Pool
 from . import bank
-from . import party
+
+__all__ = ['register']
 
 
 def register():
     Pool.register(
         bank.Bank,
-        bank.BankAccount,
-        bank.BankAccountNumber,
-        party.Party,
-        party.Address,
-        party.Category,
-        party.PartyCategory,
+        bank.Account,
+        bank.AccountNumber,
         module='bank_ar', type_='model')
