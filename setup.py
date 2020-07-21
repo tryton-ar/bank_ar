@@ -51,9 +51,8 @@ download_url = 'https://github.com/tryton-ar/bank_ar/tree/%s.%s' % (
     major_version, minor_version)
 if minor_version % 2:
     version = '%s.%s.dev0' % (major_version, minor_version)
-    download_url = (
-        'git+http://gitlab711/tryton/%s#egg=%s-%s' % (
-            name.replace('trytonar','trytond'), name, version))
+    download_url = 'git+http://gitlab711/tryton/%s#egg=%s-%s' % (
+        name.replace('trytonar', 'trytond'), name, version)
 local_version = []
 for build in ['CI_BUILD_NUMBER', 'CI_JOB_NUMBER', 'CI_JOB_ID']:
     if os.environ.get(build):
@@ -69,13 +68,11 @@ LINKS = {
 
 requires = []
 for dep in info.get('depends', []):
-    if dep == 'party_ar':
-        requires.append('trytonar_party_ar @ git+https://github.com/tryton-ar/party_ar.git@%s.%s#egg=trytonar_party_ar-%s.%s' % (major_version, minor_version, major_version, minor_version))
-    elif not re.match(r'(ir|res)(\W|$)', dep):
-        requires.append(get_require_version('trytond_%s' % dep))
+    if not re.match(r'(ir|res)(\W|$)', dep):
+        module_name = '%s_%s' % (MODULE2PREFIX.get(dep, 'trytond'), dep)
+        requires.append(get_require_version(module_name))
+
 requires.append(get_require_version('trytond'))
-requires.append('pyafipws @ git+https://github.com/reingart/pyafipws.git@py3k#egg=pyafipws-py3k')
-requires.append('pysimplesoap @ git+https://github.com/pysimplesoap/pysimplesoap.git@stable_py3k#egg=pysimplesoap-stable_py3k')
 
 tests_require = [get_require_version('proteus')]
 dependency_links = list(LINKS.values())
@@ -91,12 +88,12 @@ setup(name=name,
         "Bug Tracker": 'https://bugs.tryton.org/',
         "Documentation": 'https://docs.tryton.org/',
         "Forum": 'https://www.tryton.org/forum',
-        "Source Code": 'https://github.com/gcoop-libre/trytond-sale_subscription_tiendascoop',
+        "Source Code": 'https://github.com/tryton-ar/bank_ar',
         },
     package_dir={'trytond.modules.bank_ar': '.'},
     packages=(
-        ['trytond.modules.bank_ar']
-        + ['trytond.modules.bank_ar.%s' % p
+        ['trytond.modules.bank_ar'] +
+        ['trytond.modules.bank_ar.%s' % p
             for p in find_packages()]
         ),
     package_data={
@@ -110,8 +107,8 @@ setup(name=name,
         'Intended Audience :: Developers',
         'Intended Audience :: Financial and Insurance Industry',
         'Intended Audience :: Legal Industry',
-        'License :: OSI Approved :: '
-        'GNU General Public License v3 or later (GPLv3+)',
+        'License :: OSI Approved :: GNU General Public License v3 or later'
+        ' (GPLv3+)',
         'Natural Language :: English',
         'Natural Language :: Spanish',
         'Operating System :: OS Independent',
@@ -123,6 +120,7 @@ setup(name=name,
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Office/Business',
+        'Topic :: Office/Business :: Financial :: Accounting',
         ],
     license='GPL-3',
     python_requires='>=3.5',
@@ -134,7 +132,7 @@ setup(name=name,
     bank_ar = trytond.modules.bank_ar
     [console_scripts]
     trytond_import_banks_ar = trytond.modules.bank_ar.scripts.import_banks:run
-    """,  # noqa: E501
+    """,
     test_suite='tests',
     test_loader='trytond.test_loader:Loader',
     tests_require=tests_require,
