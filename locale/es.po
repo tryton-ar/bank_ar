@@ -29,3 +29,7 @@ msgstr ""
 msgctxt "selection:bank.account.number,type:"
 msgid "CBU"
 msgstr ""
+
+msgctxt "model:ir.message,text:msg_invalid_cbu"
+msgid "CBU number \"%(number)s\" is not valid."
+msgstr "El número CBU \"%(number)s\" no es válido."
