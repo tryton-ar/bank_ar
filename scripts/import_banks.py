@@ -6,7 +6,7 @@ import os
 import sys
 
 from argparse import ArgumentParser
-from io import BytesIO, StringIO
+from io import StringIO
 from trytond.tools import file_open
 
 try:
@@ -69,12 +69,11 @@ def import_(data):
             continue
         country = get_country(row['country'])
         subdivision = get_subdivision(row['country'], row['subdivision'])
-        zip = row['zip']
         bcra_code = row['bcra_code']
         print(bcra_code, file=sys.stderr)
         try:
             bank, = Bank.find([('bcra_code', '=', bcra_code)])
-        except:
+        except Exception:
             party = Party(name=row['name'])
             party.vat_number = row['vat_number']
             party.iva_condition = 'responsable_inscripto'

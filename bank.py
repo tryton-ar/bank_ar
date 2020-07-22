@@ -2,7 +2,6 @@
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
 from stdnum.ar import cbu
-import stdnum.exceptions
 
 from trytond.model import fields
 from trytond.pyson import Eval, If, In
@@ -26,11 +25,9 @@ class Bank(metaclass=PoolMeta):
 
         super(Bank, cls).__register__(module_name)
 
-        table = cls.__table_handler__(module_name)
-
         # Migration from 5.2: remove bank_ar data
-        cursor.execute(*data.delete(where=(data.module == 'bank_ar')
-                & (data.model == cls.__name__)))
+        cursor.execute(*data.delete(where=(data.module == 'bank_ar') &
+            (data.model == cls.__name__)))
 
 
 class Account(metaclass=PoolMeta):
@@ -38,40 +35,39 @@ class Account(metaclass=PoolMeta):
 
     journal = fields.Many2One('account.journal', 'Account Journal',
         states={
-            'required': If(In(Eval('party_company'), Eval('owners', [])), True, False),
+            'required': If(In(Eval('party_company'), Eval('owners', [])),
+                True, False),
             },
         depends=['owners', 'party_company'])
     credit_account = fields.Many2One('account.account', 'Credit Account',
         states={
-            'required': If(In(Eval('party_company'), Eval('owners', [])), True, False),
+            'required': If(In(Eval('party_company'), Eval('owners', [])),
+                True, False),
             },
         domain=[
-            ('kind', '!=', 'view'),
+            ('type', '!=', None),
             ('company', '=', Eval('context', {}).get('company', -1)),
             ], depends=['owners', 'party_company'])
     debit_account = fields.Many2One('account.account', 'Debit Account',
         states={
-            'required': If(In(Eval('party_company'), Eval('owners', [])), True, False),
+            'required': If(In(Eval('party_company'), Eval('owners', [])),
+                True, False),
             },
         domain=[
-            ('kind', '!=', 'view'),
+            ('type', '!=', None),
             ('company', '=', Eval('context', {}).get('company', -1)),
             ], depends=['owners', 'party_company'])
-    party_company = fields.Function(fields.Many2One('party.party', 'party_company'),
-        'on_change_with_party_company')
+    party_company = fields.Function(fields.Many2One('party.party', 'Company'),
+        'get_party_company')
 
     @staticmethod
     def default_party_company():
         Company = Pool().get('company.company')
         if Transaction().context.get('company'):
-            company = Company(Transaction().context['company'])
-            return company.party.id
+            return Company(Transaction().context['company']).party.id
 
-    def on_change_with_party_company(self, name=None):
-        Company = Pool().get('company.company')
-        if Transaction().context.get('company'):
-            company = Company(Transaction().context['company'])
-            return company.party.id
+    def get_party_company(self, name=None):
+        return self.default_party_company()
 
     def get_cbu_number(self):
         '''
@@ -140,8 +136,7 @@ class AccountNumber(metaclass=PoolMeta):
     @fields.depends('type', 'number')
     def pre_validate(self):
         super(AccountNumber, self).pre_validate()
-        if (self.type == 'cbu' and self.number
-                and not cbu.is_valid(self.number)):
-            raise CBUValidationError(
-                gettext('bank_ar.msg_invalid_cbu',
-                    number=self.number))
+        if (self.type == 'cbu' and self.number and
+                not cbu.is_valid(self.number)):
+            raise CBUValidationError(gettext(
+                'bank_ar.msg_invalid_cbu', number=self.number))
