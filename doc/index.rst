@@ -3,6 +3,13 @@ bank_ar
 
 Tryton module for banks of Argentina
 
+Scripts
+*******
+
+There are two scripts:
+
+`trytond_import_banks` to create banks of argentina.
+
 Support
 -------
 
