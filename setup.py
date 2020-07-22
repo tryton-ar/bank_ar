@@ -9,6 +9,10 @@ import re
 from configparser import ConfigParser
 from setuptools import setup, find_packages
 
+MODULE2PREFIX = {
+    'party_ar': 'trytonar',
+    }
+
 
 def read(fname, slice=None):
     content = io.open(
@@ -20,6 +24,8 @@ def read(fname, slice=None):
 
 
 def get_require_version(name):
+    if name in LINKS:
+        return '%s @ %s' % (name, LINKS[name])
     if minor_version % 2:
         require = '%s >= %s.%s.dev0, < %s.%s'
     else:
@@ -54,6 +60,12 @@ for build in ['CI_BUILD_NUMBER', 'CI_JOB_NUMBER', 'CI_JOB_ID']:
 if local_version:
     version += '+' + '.'.join(local_version)
 
+LINKS = {
+    'trytonar_party_ar': ('git+https://github.com/tryton-ar/'
+        'party_ar.git@%s.%s#egg=trytonar_party_ar-%s.%s' %
+        (major_version, minor_version, major_version, minor_version)),
+    }
+
 requires = []
 for dep in info.get('depends', []):
     if not re.match(r'(ir|res)(\W|$)', dep):
@@ -63,13 +75,7 @@ for dep in info.get('depends', []):
 requires.append(get_require_version('trytond'))
 
 tests_require = [get_require_version('proteus')]
-dependency_links = [
-    'trytonar_party_ar @ git+https://github.com/tryton-ar/party_ar.git@%s.%s#egg=trytonar_party_ar-%s.%s' % (major_version, minor_version, major_version, minor_version),
-    'pyafipws @ git+https://github.com/reingart/pyafipws.git@py3k#egg=pyafipws-py3k',
-    'pysimplesoap @ git+https://github.com/pysimplesoap/pysimplesoap.git@stable_py3k#egg=pysimplesoap-stable_py3k',
-    ]
-if minor_version % 2:
-    dependency_links.append('https://trydevpi.tryton.org/')
+dependency_links = list(LINKS.values())
 
 setup(name=name,
     version=version,
@@ -91,11 +97,11 @@ setup(name=name,
             for p in find_packages()]
         ),
     package_data={
-        'trytond.modules.bank_ar': (info.get('xml', [])
-            + ['tryton.cfg', 'view/*.xml', 'locale/*.po', 'data/*.xml']),
+        'trytond.modules.bank_ar': (info.get('xml', []) + [
+            'tryton.cfg', 'view/*.xml', 'locale/*.po', 'data/*.xml']),
         },
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Plugins',
         'Framework :: Tryton',
         'Intended Audience :: Developers',
