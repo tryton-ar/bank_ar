@@ -12,25 +12,6 @@ from trytond.i18n import gettext
 from .exceptions import CBUValidationError
 
 
-class Party(metaclass=PoolMeta):
-    __name__ = 'party.party'
-
-    @classmethod
-    def __register__(cls, module_name):
-        pool = Pool()
-        Data = pool.get('ir.model.data')
-        data = Data.__table__()
-        cursor = Transaction().connection.cursor()
-
-        super(Party, cls).__register__(module_name)
-
-        table = cls.__table_handler__(module_name)
-
-        # Migration from 5.2: remove bank_ar data
-        cursor.execute(*data.delete(where=(data.module == 'bank_ar')
-                & (data.model == cls.__name__)))
-
-
 class Bank(metaclass=PoolMeta):
     __name__ = 'bank'
 
