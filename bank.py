@@ -4,12 +4,11 @@
 from stdnum.ar import cbu
 import stdnum.exceptions
 
-from trytond.i18n import gettext
 from trytond.model import fields
 from trytond.pyson import Eval, If, In
 from trytond.pool import PoolMeta, Pool
 from trytond.transaction import Transaction
-
+from trytond.i18n import gettext
 from .exceptions import CBUValidationError
 
 

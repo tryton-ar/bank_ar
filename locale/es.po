@@ -2,10 +2,6 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "error:bank.account.number:"
-msgid "Invalid CBU \"%s\"."
-msgstr "CBU inválido \"%s\""
-
 msgctxt "field:bank,bcra_code:"
 msgid "BCRA code"
 msgstr "Código BCRA"
