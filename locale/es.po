@@ -18,14 +18,14 @@ msgctxt "field:bank.account,journal:"
 msgid "Account Journal"
 msgstr "Diario contable"
 
-msgctxt "model:party.category,name:party_category_bancos"
-msgid "Bancos"
-msgstr ""
-
-msgctxt "selection:bank.account.number,type:"
-msgid "CBU"
-msgstr ""
+msgctxt "field:bank.account,party_company:"
+msgid "Company"
+msgstr "Empresa"
 
 msgctxt "model:ir.message,text:msg_invalid_cbu"
 msgid "CBU number \"%(number)s\" is not valid."
 msgstr "El número CBU \"%(number)s\" no es válido."
+
+msgctxt "selection:bank.account.number,type:"
+msgid "CBU"
+msgstr "CBU"
