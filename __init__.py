@@ -6,8 +6,6 @@ from trytond.pool import Pool
 from . import bank
 from . import party
 
-__all__ = ['register']
-
 
 def register():
     Pool.register(
