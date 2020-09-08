@@ -7,8 +7,10 @@ import io
 import os
 import re
 from configparser import ConfigParser
-from setuptools import setup, find_packages
+from setuptools import setup
 
+MODULE = 'bank_ar'
+PREFIX = 'trytonar'
 MODULE2PREFIX = {
     'party_ar': 'trytonar',
     }
@@ -45,20 +47,9 @@ version = info.get('version', '0.0.1')
 major_version, minor_version, _ = version.split('.', 2)
 major_version = int(major_version)
 minor_version = int(minor_version)
-name = 'trytonar_bank_ar'
 
 download_url = 'https://github.com/tryton-ar/bank_ar/tree/%s.%s' % (
     major_version, minor_version)
-if minor_version % 2:
-    version = '%s.%s.dev0' % (major_version, minor_version)
-    download_url = 'git+http://gitlab711/tryton/%s#egg=%s-%s' % (
-        name.replace('trytonar', 'trytond'), name, version)
-local_version = []
-for build in ['CI_BUILD_NUMBER', 'CI_JOB_NUMBER', 'CI_JOB_ID']:
-    if os.environ.get(build):
-        local_version.append(os.environ[build])
-if local_version:
-    version += '+' + '.'.join(local_version)
 
 LINKS = {
     'trytonar_party_ar': ('git+https://github.com/tryton-ar/'
@@ -77,7 +68,7 @@ requires.append(get_require_version('trytond'))
 tests_require = [get_require_version('proteus')]
 dependency_links = list(LINKS.values())
 
-setup(name=name,
+setup(name='%s_%s' % (PREFIX, MODULE),
     version=version,
     description='Tryton module for banks of Argentina',
     long_description=read('README.rst'),
@@ -90,15 +81,15 @@ setup(name=name,
         "Forum": 'https://www.tryton.org/forum',
         "Source Code": 'https://github.com/tryton-ar/bank_ar',
         },
-    package_dir={'trytond.modules.bank_ar': '.'},
-    packages=(
-        ['trytond.modules.bank_ar'] +
-        ['trytond.modules.bank_ar.%s' % p
-            for p in find_packages()]
-        ),
+    package_dir={'trytond.modules.%s' % MODULE: '.'},
+    packages=[
+        'trytond.modules.%s' % MODULE,
+        'trytond.modules.%s.tests' % MODULE,
+        'trytond.modules.%s.scripts' % MODULE,
+        ],
     package_data={
-        'trytond.modules.bank_ar': (info.get('xml', []) + [
-            'tryton.cfg', 'view/*.xml', 'locale/*.po', 'data/*.xml']),
+        'trytond.modules.%s' % MODULE: (info.get('xml', []) + [
+            'tryton.cfg', 'view/*.xml', 'locale/*.po', 'scripts/*.csv']),
         },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -107,8 +98,8 @@ setup(name=name,
         'Intended Audience :: Developers',
         'Intended Audience :: Financial and Insurance Industry',
         'Intended Audience :: Legal Industry',
-        'License :: OSI Approved :: GNU General Public License v3 or later'
-        ' (GPLv3+)',
+        'License :: OSI Approved :: '
+        'GNU General Public License v3 or later (GPLv3+)',
         'Natural Language :: English',
         'Natural Language :: Spanish',
         'Operating System :: OS Independent',
@@ -129,10 +120,10 @@ setup(name=name,
     zip_safe=False,
     entry_points="""
     [trytond.modules]
-    bank_ar = trytond.modules.bank_ar
+    %s = trytond.modules.%s
     [console_scripts]
     trytond_import_banks_ar = trytond.modules.bank_ar.scripts.import_banks:run
-    """,
+    """ % (MODULE, MODULE),
     test_suite='tests',
     test_loader='trytond.test_loader:Loader',
     tests_require=tests_require,
