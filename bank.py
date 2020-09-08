@@ -23,7 +23,7 @@ class Bank(metaclass=PoolMeta):
         data = Data.__table__()
         cursor = Transaction().connection.cursor()
 
-        super(Bank, cls).__register__(module_name)
+        super().__register__(module_name)
 
         # Migration from 5.2: remove bank_ar data
         cursor.execute(*data.delete(where=(data.module == 'bank_ar') &
@@ -87,7 +87,7 @@ class AccountNumber(metaclass=PoolMeta):
 
     @classmethod
     def __setup__(cls):
-        super(AccountNumber, cls).__setup__()
+        super().__setup__()
         for new_type in [('cbu', 'CBU')]:
             if new_type not in cls.type.selection:
                 cls.type.selection.append(new_type)
@@ -99,7 +99,7 @@ class AccountNumber(metaclass=PoolMeta):
             if values.get('type') == 'cbu' and 'number' in values:
                 values['number'] = cbu.format(values['number'])
                 values['number_compact'] = cbu.compact(values['number'])
-        return super(AccountNumber, cls).create(vlist)
+        return super().create(vlist)
 
     @classmethod
     def write(cls, *args):
@@ -112,7 +112,7 @@ class AccountNumber(metaclass=PoolMeta):
                 values['number_compact'] = cbu.compact(values['number'])
             args.extend((numbers, values))
 
-        super(AccountNumber, cls).write(*args)
+        super().write(*args)
 
         to_write = []
         for number in sum(args[::2], []):
@@ -135,7 +135,7 @@ class AccountNumber(metaclass=PoolMeta):
 
     @fields.depends('type', 'number')
     def pre_validate(self):
-        super(AccountNumber, self).pre_validate()
+        super().pre_validate()
         if (self.type == 'cbu' and self.number and
                 not cbu.is_valid(self.number)):
             raise CBUValidationError(gettext(

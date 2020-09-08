@@ -15,7 +15,7 @@ class Party(metaclass=PoolMeta):
         data = Data.__table__()
         cursor = Transaction().connection.cursor()
 
-        super(Party, cls).__register__(module_name)
+        super().__register__(module_name)
 
         # Migration from 5.2: remove bank_ar data
         cursor.execute(*data.delete(where=(data.module == 'bank_ar') &
@@ -32,7 +32,7 @@ class Address(metaclass=PoolMeta):
         data = Data.__table__()
         cursor = Transaction().connection.cursor()
 
-        super(Address, cls).__register__(module_name)
+        super().__register__(module_name)
 
         # Migration from 5.2: remove bank_ar data
         cursor.execute(*data.delete(where=(data.module == 'bank_ar') &
@@ -49,7 +49,7 @@ class Category(metaclass=PoolMeta):
         data = Data.__table__()
         cursor = Transaction().connection.cursor()
 
-        super(Category, cls).__register__(module_name)
+        super().__register__(module_name)
 
         # Migration from 5.2: remove bank_ar data
         cursor.execute(*data.delete(where=(data.module == 'bank_ar') &
@@ -66,7 +66,7 @@ class PartyCategory(metaclass=PoolMeta):
         data = Data.__table__()
         cursor = Transaction().connection.cursor()
 
-        super(PartyCategory, cls).__register__(module_name)
+        super().__register__(module_name)
 
         # Migration from 5.2: remove bank_ar data
         cursor.execute(*data.delete(where=(data.module == 'bank_ar') &
