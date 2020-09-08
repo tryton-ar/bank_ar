@@ -4,8 +4,8 @@
 from stdnum.ar import cbu
 
 from trytond.model import fields
-from trytond.pyson import Eval, If, In
 from trytond.pool import PoolMeta, Pool
+from trytond.pyson import Eval, If, In
 from trytond.transaction import Transaction
 from trytond.i18n import gettext
 from .exceptions import CBUValidationError
@@ -46,6 +46,7 @@ class Account(metaclass=PoolMeta):
             },
         domain=[
             ('type', '!=', None),
+            ('closed', '!=', True),
             ('company', '=', Eval('context', {}).get('company', -1)),
             ], depends=['owners', 'party_company'])
     debit_account = fields.Many2One('account.account', 'Debit Account',
@@ -55,6 +56,7 @@ class Account(metaclass=PoolMeta):
             },
         domain=[
             ('type', '!=', None),
+            ('closed', '!=', True),
             ('company', '=', Eval('context', {}).get('company', -1)),
             ], depends=['owners', 'party_company'])
     party_company = fields.Function(fields.Many2One('party.party', 'Company'),
