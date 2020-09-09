@@ -1,12 +1,12 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # This file is part of Tryton.  The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
-import csv
 import os
 import sys
-
 from argparse import ArgumentParser
 from io import StringIO
+from csv import DictReader
+
 from trytond.tools import file_open
 
 try:
@@ -21,14 +21,24 @@ except ImportError:
     sys.exit("proteus must be installed to use %s" % prog)
 
 
+def _progress(iterable):
+    if ProgressBar:
+        pbar = ProgressBar(
+            widgets=[SimpleProgress(), Bar(), ETA()])
+    else:
+        pbar = iter
+    return pbar(iterable)
+
+
 def fetch():
-    sys.stderr.write('Fetching')
+    print('Fetching', file=sys.stderr)
     with file_open('bank_ar/scripts/bank_ar.csv', mode='rb') as fp:
         data = fp.read()
     return data
 
 
 def import_(data):
+    PartyCategory = Model.get('party.category')
     Party = Model.get('party.party')
     Address = Model.get('party.address')
     Bank = Model.get('bank')
@@ -56,19 +66,20 @@ def import_(data):
         return subdivision
     subdivisions = {}
 
-    if ProgressBar:
-        pbar = ProgressBar(
-            widgets=[SimpleProgress(), Bar(), ETA()])
-    else:
-        pbar = iter
+    bank_category_name = 'Bancos'
+    try:
+        bank_category, = PartyCategory.find([
+            ('name', '=', bank_category_name)])
+    except Exception:
+        bank_category = PartyCategory(name=bank_category_name)
+        bank_category.save()
+
     f = StringIO(data.decode('utf-8'))
     records = []
-    for row in pbar(list(csv.DictReader(
-                    f, fieldnames=_fieldnames, delimiter=';'))):
+    for row in _progress(list(DictReader(
+            f, fieldnames=_fieldnames, delimiter=';'))):
         if row['country'] == 'country':
             continue
-        country = get_country(row['country'])
-        subdivision = get_subdivision(row['country'], row['subdivision'])
         bcra_code = row['bcra_code']
         print(bcra_code, file=sys.stderr)
         try:
@@ -78,12 +89,19 @@ def import_(data):
             party.vat_number = row['vat_number']
             party.iva_condition = 'responsable_inscripto'
             party.addresses.pop()
-            party.addresses.append(Address(street=row['street'],
-                    zip=row['zip'], city=row['city'], country=country,
-                    subdivision=subdivision))
+            party.addresses.append(Address(
+                    street=row['street'],
+                    zip=row['zip'],
+                    city=row['city'],
+                    country=get_country(row['country']),
+                    subdivision=get_subdivision(
+                        row['country'], row['subdivision'])))
+            party.categories.append(PartyCategory(bank_category.id))
             party.save()
-            record = Bank(bcra_code=row['bcra_code'], bic=row['bic'],
-                          party=party)
+            record = Bank(
+                party=party,
+                bcra_code=bcra_code,
+                bic=row['bic'])
             records.append(record)
     Bank.save(records)
 
@@ -98,8 +116,7 @@ def main(database, config_file=None):
 
 
 def do_import():
-    data = fetch()
-    import_(data)
+    import_(fetch())
 
 
 def run():
