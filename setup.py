@@ -122,8 +122,8 @@ setup(name='%s_%s' % (PREFIX, MODULE),
     [trytond.modules]
     %s = trytond.modules.%s
     [console_scripts]
-    trytond_import_banks_ar = trytond.modules.bank_ar.scripts.import_banks:run
-    """ % (MODULE, MODULE),
+    trytond_import_banks_ar = trytond.modules.%s.scripts.import_banks:run
+    """ % (MODULE, MODULE, MODULE),
     test_suite='tests',
     test_loader='trytond.test_loader:Loader',
     tests_require=tests_require,
