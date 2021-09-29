@@ -1,4 +1,4 @@
-name;bic;bcra_code;vat_number;street;zip;city;subdivision;country
+name;bic;bcra_code;vat_number;street;postal_code;city;subdivision;country
 "AMERICAN EXPRESS BANK LTD SA";;295;30626219353;"ARENALES 707";1061;"Buenos Aires";C;AR
 "BACS BANCO DE CREDITO Y SECURITIZACION SA";;340;30707227415;"TUCUMAN 1 Piso:19";1049;"Buenos Aires";C;AR
 "BANCO INTERFINANZAS SA";BIINARBA;147;30522714417;"BOUCHARD AV. 547 Piso:24";1106;"Buenos Aires";C;AR

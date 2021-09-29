@@ -91,7 +91,7 @@ def import_(data):
             party.addresses.pop()
             party.addresses.append(Address(
                     street=row['street'],
-                    zip=row['zip'],
+                    postal_code=row['postal_code'],
                     city=row['city'],
                     country=get_country(row['country']),
                     subdivision=get_subdivision(
@@ -107,7 +107,7 @@ def import_(data):
 
 
 _fieldnames = ['name', 'bic', 'bcra_code', 'vat_number', 'street',
-    'zip', 'city', 'subdivision', 'country']
+    'postal_code', 'city', 'subdivision', 'country']
 
 
 def main(database, config_file=None):
