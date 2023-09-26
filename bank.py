@@ -37,8 +37,7 @@ class Account(metaclass=PoolMeta):
         states={
             'required': If(In(Eval('party_company'), Eval('owners', [])),
                 True, False),
-            },
-        depends=['owners', 'party_company'])
+            })
     credit_account = fields.Many2One('account.account', 'Credit Account',
         states={
             'required': If(In(Eval('party_company'), Eval('owners', [])),
@@ -48,7 +47,7 @@ class Account(metaclass=PoolMeta):
             ('type', '!=', None),
             ('closed', '!=', True),
             ('company', '=', Eval('context', {}).get('company', -1)),
-            ], depends=['owners', 'party_company'])
+            ])
     debit_account = fields.Many2One('account.account', 'Debit Account',
         states={
             'required': If(In(Eval('party_company'), Eval('owners', [])),
@@ -58,7 +57,7 @@ class Account(metaclass=PoolMeta):
             ('type', '!=', None),
             ('closed', '!=', True),
             ('company', '=', Eval('context', {}).get('company', -1)),
-            ], depends=['owners', 'party_company'])
+            ])
     party_company = fields.Function(fields.Many2One('party.party', 'Company'),
         'get_party_company')
 
