@@ -2,6 +2,7 @@
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
 from stdnum.ar import cbu
+from sql import Null
 
 from trytond.model import fields
 from trytond.pool import PoolMeta, Pool
@@ -33,42 +34,46 @@ class Bank(metaclass=PoolMeta):
 class Account(metaclass=PoolMeta):
     __name__ = 'bank.account'
 
-    journal = fields.Many2One('account.journal', 'Account Journal',
+    account = fields.Many2One('account.account', 'Account',
         states={
-            'required': If(In(Eval('party_company'), Eval('owners', [])),
-                True, False),
-            })
-    credit_account = fields.Many2One('account.account', 'Credit Account',
-        states={
-            'required': If(In(Eval('party_company'), Eval('owners', [])),
+            'invisible': If(In(Eval('company_party'), Eval('owners', [])),
+                False, True),
+            'required': If(In(Eval('company_party'), Eval('owners', [])),
                 True, False),
             },
         domain=[
-            ('type', '!=', None),
             ('closed', '!=', True),
+            ('type', '!=', None),
             ('company', '=', Eval('context', {}).get('company', -1)),
             ])
-    debit_account = fields.Many2One('account.account', 'Debit Account',
-        states={
-            'required': If(In(Eval('party_company'), Eval('owners', [])),
-                True, False),
-            },
-        domain=[
-            ('type', '!=', None),
-            ('closed', '!=', True),
-            ('company', '=', Eval('context', {}).get('company', -1)),
-            ])
-    party_company = fields.Function(fields.Many2One('party.party', 'Company'),
-        'get_party_company')
+    company_party = fields.Function(fields.Many2One('party.party',
+        'Company Party'), 'get_company_party')
+
+    @classmethod
+    def __register__(cls, module_name):
+        cursor = Transaction().connection.cursor()
+        sql_table = cls.__table__()
+        table_h = cls.__table_handler__(module_name)
+
+        credit_account_exist = table_h.column_exist('credit_account')
+
+        super().__register__(module_name)
+
+        if credit_account_exist:
+            cursor.execute(*sql_table.update(
+                    [sql_table.account], [sql_table.credit_account],
+                    where=sql_table.credit_account != Null))
+            table_h.drop_column('credit_account')
+            table_h.drop_column('debit_account')
 
     @staticmethod
-    def default_party_company():
+    def default_company_party():
         Company = Pool().get('company.company')
         if Transaction().context.get('company'):
             return Company(Transaction().context['company']).party.id
 
-    def get_party_company(self, name=None):
-        return self.default_party_company()
+    def get_company_party(self, name=None):
+        return self.default_company_party()
 
     def get_cbu_number(self):
         '''
